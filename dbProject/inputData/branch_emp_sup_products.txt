@@ -1,0 +1,1552 @@
+-- INCLUDE branch x 10 , employees x 140 (14 per branch), SUPPLIER x 50, 
+-- product total 500 (phone x 250, cover x 150,charger 50, headset x 50 )
+
+-- branch
+INSERT INTO BRANCHES (branchId, branchName, mobileNumber, email, street, city, state, postalCode) VALUES
+(01, 'Bree Mobile Bangkok', 0891234567, 'contact.bkk@breemobile.com', '123 Sukhumvit Rd', 'Bangkok', 'Bangkok', 10110),
+(02, 'Bree Mobile Chiang Mai', 0897654321, 'contact.cnx@breemobile.com', '456 Nimmanhaemin Rd', 'Chiang Mai', 'Chiang Mai', 50200),
+(03, 'Bree Mobile Phuket', 0898765432, 'contact.phuket@breemobile.com', '789 Patong Beach Rd', 'Phuket', 'Phuket', 83150),
+(04, 'Bree Mobile Khon Kaen', 0895432167, 'contact.khonkaen@breemobile.com', '321 Mittraparp Rd', 'Khon Kaen', 'Khon Kaen', 40000),
+(05, 'Bree Mobile Surat Thani', 0891112233, 'contact.surat@breemobile.com', '555 Talad Mai Rd', 'Surat Thani', 'Surat Thani', 84000),
+(06, 'Bree Mobile Nakhon Ratchasima', 0892223344, 'contact.korat@breemobile.com', '222 Mittraphap Rd', 'Nakhon Ratchasima', 'Nakhon Ratchasima', 30000),
+(07, 'Bree Mobile Udon Thani', 0893334455, 'contact.udon@breemobile.com', '333 Phosri Rd', 'Udon Thani', 'Udon Thani', 41000),
+(08, 'Bree Mobile Rayong', 0894445566, 'contact.rayong@breemobile.com', '444 Sukhumvit Rd', 'Rayong', 'Rayong', 21150),
+(09, 'Bree Mobile Hat Yai', 0895556677, 'contact.hatyai@breemobile.com', '555 Kanjanavanit Rd', 'Hat Yai', 'Songkhla', 90110),
+(10, 'Bree Mobile Samut Prakan', 0896667788, 'contact.samut@breemobile.com', '666 Sukhumvit 77 Rd', 'Samut Prakan', 'Samut Prakan', 10270);
+
+
+-- employees
+-- employees
+INSERT INTO EMPLOYEES (employeeId, branchId, firstName, lastName, empRole, mobileNumber, email, street, city, state, postalCode) VALUES
+(256601001, 01, 'John', 'Doe', 'Manager', 0891111111, 'johndoe@gmail.com', '1/1 Sukhumvit Rd', 'Bangkok', 'Bangkok', 10110),
+(256601002, 01, 'Alice', 'Smith', 'Sales Associate', 0892222222, 'alicesmith@gmail.com', '2/2 Sukhumvit Rd', 'Bangkok', 'Bangkok', 10110),
+(256601003, 01, 'Bob', 'Brown', 'Sales Associate', 0893333333, 'bobbrown@gmail.com', '3/3 Sukhumvit Rd', 'Bangkok', 'Bangkok', 10110),
+(256601004, 01, 'Charlie', 'Johnson', 'Sales Associate', 0894444444, 'charliejohnson@gmail.com', '4/4 Sukhumvit Rd', 'Bangkok', 'Bangkok', 10110),
+(256601005, 01, 'David', 'Williams', 'Sales Associate', 0895555555, 'davidwilliams@gmail.com', '5/5 Sukhumvit Rd', 'Bangkok', 'Bangkok', 10110),
+(256601006, 01, 'Eva', 'Davis', 'Sales Associate', 0896666666, 'evadavis@gmail.com', '6/6 Sukhumvit Rd', 'Bangkok', 'Bangkok', 10110),
+(256601007, 01, 'Frank', 'Miller', 'Customer Service', 0897777777, 'frankmiller@gmail.com', '7/7 Sukhumvit Rd', 'Bangkok', 'Bangkok', 10110),
+(256601008, 01, 'Grace', 'Wilson', 'Customer Service', 0898888888, 'gracewilson@gmail.com', '8/8 Sukhumvit Rd', 'Bangkok', 'Bangkok', 10110),
+(256601009, 01, 'Henry', 'Moore', 'Security', 0899999999, 'henrymoore@gmail.com', '9/9 Sukhumvit Rd', 'Bangkok', 'Bangkok', 10110),
+(256601010, 01, 'Isabella', 'Taylor', 'Security', 0890123456, 'isabellataylor@gmail.com', '10/10 Sukhumvit Rd', 'Bangkok', 'Bangkok', 10110),
+(256601011, 01, 'Jack', 'Anderson', 'Technician', 0891234567, 'jackanderson@gmail.com', '11/11 Sukhumvit Rd', 'Bangkok', 'Bangkok', 10110),
+(256601012, 01, 'Kate', 'Thomas', 'Technician', 0892345678, 'katethomas@gmail.com', '12/12 Sukhumvit Rd', 'Bangkok', 'Bangkok', 10110),
+(256601013, 01, 'Liam', 'Jackson', 'Janitor', 0893456789, 'liamjackson@gmail.com', '13/13 Sukhumvit Rd', 'Bangkok', 'Bangkok', 10110),
+(256601014, 01, 'Mia', 'White', 'Janitor', 0894567890, 'miawhite@gmail.com', '14/14 Sukhumvit Rd', 'Bangkok', 'Bangkok', 10110);
+
+INSERT INTO EMPLOYEES (employeeId, branchId, firstName, lastName, empRole, mobileNumber, email, street, city, state, postalCode) VALUES
+(256602001, 02, 'Noah', 'Harris', 'Manager', 0895678901, 'noahharris@gmail.com', '1/1 Nimmanhaemin Rd', 'Chiang Mai', 'Chiang Mai', 50200),
+(256602002, 02, 'Olivia', 'Clark', 'Sales Associate', 0896789012, 'oliviaclark@gmail.com', '2/2 Nimmanhaemin Rd', 'Chiang Mai', 'Chiang Mai', 50200),
+(256602003, 02, 'James', 'Lewis', 'Sales Associate', 0897890123, 'jameslewis@gmail.com', '3/3 Nimmanhaemin Rd', 'Chiang Mai', 'Chiang Mai', 50200),
+(256602004, 02, 'Sophia', 'Robinson', 'Sales Associate', 0898901234, 'sophiarobinson@gmail.com', '4/4 Nimmanhaemin Rd', 'Chiang Mai', 'Chiang Mai', 50200),
+(256602005, 02, 'William', 'Walker', 'Sales Associate', 0899012345, 'williamwalker@gmail.com', '5/5 Nimmanhaemin Rd', 'Chiang Mai', 'Chiang Mai', 50200),
+(256602006, 02, 'Ava', 'Hall', 'Sales Associate', 0890123456, 'avahall@gmail.com', '6/6 Nimmanhaemin Rd', 'Chiang Mai', 'Chiang Mai', 50200),
+(256602007, 02, 'Ethan', 'Young', 'Customer Service', 0891234567, 'ethanyoung@gmail.com', '7/7 Nimmanhaemin Rd', 'Chiang Mai', 'Chiang Mai', 50200),
+(256602008, 02, 'Isabella', 'King', 'Customer Service', 0892345678, 'isabellaking@gmail.com', '8/8 Nimmanhaemin Rd', 'Chiang Mai', 'Chiang Mai', 50200),
+(256602009, 02, 'Lucas', 'Scott', 'Security', 0893456789, 'lucasscott@gmail.com', '9/9 Nimmanhaemin Rd', 'Chiang Mai', 'Chiang Mai', 50200),
+(256602010, 02, 'Mia', 'Green', 'Security', 0894567890, 'miagreen@gmail.com', '10/10 Nimmanhaemin Rd', 'Chiang Mai', 'Chiang Mai', 50200),
+(256602011, 02, 'Aiden', 'Adams', 'Technician', 0895678901, 'aidenadams@gmail.com', '11/11 Nimmanhaemin Rd', 'Chiang Mai', 'Chiang Mai', 50200),
+(256602012, 02, 'Emily', 'Baker', 'Technician', 0896789012, 'emilybaker@gmail.com', '12/12 Nimmanhaemin Rd', 'Chiang Mai', 'Chiang Mai', 50200),
+(256602013, 02, 'Henry', 'Gonzalez', 'Janitor', 0897890123, 'henrygonzalez@gmail.com', '13/13 Nimmanhaemin Rd', 'Chiang Mai', 'Chiang Mai', 50200),
+(256602014, 02, 'Ava', 'Nelson', 'Janitor', 0898901234, 'avanelson@gmail.com', '14/14 Nimmanhaemin Rd', 'Chiang Mai', 'Chiang Mai', 50200);
+
+INSERT INTO EMPLOYEES (employeeId, branchId, firstName, lastName, empRole, mobileNumber, email, street, city, state, postalCode) VALUES
+(256603001, 03, 'Liam', 'Lopez', 'Manager', 0899012345, 'liamlopez@gmail.com', '1/1 Patong Beach Rd', 'Phuket', 'Phuket', 83150),
+(256603002, 03, 'Emma', 'Hernandez', 'Sales Associate', 0890123456, 'emmahernandez@gmail.com', '2/2 Patong Beach Rd', 'Phuket', 'Phuket', 83150),
+(256603003, 03, 'Noah', 'Martinez', 'Sales Associate', 0891234567, 'noahmartinez@gmail.com', '3/3 Patong Beach Rd', 'Phuket', 'Phuket', 83150),
+(256603004, 03, 'Sophia', 'Thompson', 'Sales Associate', 0892345678, 'sophiathompson@gmail.com', '4/4 Patong Beach Rd', 'Phuket', 'Phuket', 83150),
+(256603005, 03, 'Oliver', 'White', 'Sales Associate', 0893456789, 'oliverwhite@gmail.com', '5/5 Patong Beach Rd', 'Phuket', 'Phuket', 83150),
+(256603006, 03, 'Ava', 'Anderson', 'Sales Associate', 0894567890, 'avaanderson@gmail.com', '6/6 Patong Beach Rd', 'Phuket', 'Phuket', 83150),
+(256603007, 03, 'Elijah', 'Taylor', 'Customer Service', 0895678901, 'elijahltaylor@gmail.com', '7/7 Patong Beach Rd', 'Phuket', 'Phuket', 83150),
+(256603008, 03, 'Isabella', 'Lee', 'Customer Service', 0896789012, 'isabellalee@gmail.com', '8/8 Patong Beach Rd', 'Phuket', 'Phuket', 83150),
+(256603009, 03, 'James', 'Harris', 'Security', 0897890123, 'jamesharris@gmail.com', '9/9 Patong Beach Rd', 'Phuket', 'Phuket', 83150),
+(256603010, 03, 'Mia', 'Walker', 'Security', 0898901234, 'miawalker@gmail.com', '10/10 Patong Beach Rd', 'Phuket', 'Phuket', 83150),
+(256603011, 03, 'Daniel', 'Young', 'Technician', 0899012345, 'danielyoung@gmail.com', '11/11 Patong Beach Rd', 'Phuket', 'Phuket', 83150),
+(256603012, 03, 'Emily', 'King', 'Technician', 0890123456, 'emilyking@gmail.com', '12/12 Patong Beach Rd', 'Phuket', 'Phuket', 83150),
+(256603013, 03, 'Benjamin', 'Scott', 'Janitor', 0891234567, 'benjaminscott@gmail.com', '13/13 Patong Beach Rd', 'Phuket', 'Phuket', 83150),
+(256603014, 03, 'Ava', 'Green', 'Janitor', 0892345678, 'avagreen@gmail.com', '14/14 Patong Beach Rd', 'Phuket', 'Phuket', 83150);
+
+INSERT INTO EMPLOYEES (employeeId, branchId, firstName, lastName, empRole, mobileNumber, email, street, city, state, postalCode) VALUES
+(256604001, 04, 'Lucas', 'Rodriguez', 'Manager', 0893456789, 'lucasrodriguez@gmail.com', '1/1 Mittraparp Rd', 'Khon Kaen', 'Khon Kaen', 40000),
+(256604002, 04, 'Mia', 'Garcia', 'Sales Associate', 0894567890, 'miagarcia@gmail.com', '2/2 Mittraparp Rd', 'Khon Kaen', 'Khon Kaen', 40000),
+(256604003, 04, 'Henry', 'Martinez', 'Sales Associate', 0895678901, 'henrymartinez@gmail.com', '3/3 Mittraparp Rd', 'Khon Kaen', 'Khon Kaen', 40000),
+(256604004, 04, 'Zoe', 'Rodriguez', 'Sales Associate', 0896789012, 'zoerodriguez@gmail.com', '4/4 Mittraparp Rd', 'Khon Kaen', 'Khon Kaen', 40000),
+(256604005, 04, 'David', 'Wilson', 'Sales Associate', 0897890123, 'davidwilson@gmail.com', '5/5 Mittraparp Rd', 'Khon Kaen', 'Khon Kaen', 40000),
+(256604006, 04, 'Sophia', 'Anderson', 'Sales Associate', 0898901234, 'sophiaanderson@gmail.com', '6/6 Mittraparp Rd', 'Khon Kaen', 'Khon Kaen', 40000),
+(256604007, 04, 'Ethan', 'Thomas', 'Customer Service', 0899012345, 'ethanthomas@gmail.com', '7/7 Mittraparp Rd', 'Khon Kaen', 'Khon Kaen', 40000),
+(256604008, 04, 'Isabella', 'Lee', 'Customer Service', 0890123456, 'isabellalee@gmail.com', '8/8 Mittraparp Rd', 'Khon Kaen', 'Khon Kaen', 40000),
+(256604009, 04, 'Mason', 'Martinez', 'Security', 0891234567, 'masonmartinez@gmail.com', '9/9 Mittraparp Rd', 'Khon Kaen', 'Khon Kaen', 40000),
+(256604010, 04, 'Grace', 'Hernandez', 'Security', 0892345678, 'gracehernandez@gmail.com', '10/10 Mittraparp Rd', 'Khon Kaen', 'Khon Kaen', 40000),
+(256604011, 04, 'Lucas', 'King', 'Technician', 0893456789, 'lucasking@gmail.com', '11/11 Mittraparp Rd', 'Khon Kaen', 'Khon Kaen', 40000),
+(256604012, 04, 'Emily', 'Gonzalez', 'Technician', 0894567890, 'emilygonzalez@gmail.com', '12/12 Mittraparp Rd', 'Khon Kaen', 'Khon Kaen', 40000),
+(256604013, 04, 'Jack', 'Baker', 'Janitor', 0895678901, 'jackbaker@gmail.com', '13/13 Mittraparp Rd', 'Khon Kaen', 'Khon Kaen', 40000),
+(256604014, 04, 'Ava', 'Carter', 'Janitor', 0896789012, 'avacarter@gmail.com', '14/14 Mittraparp Rd', 'Khon Kaen', 'Khon Kaen', 40000);
+
+INSERT INTO EMPLOYEES (employeeId, branchId, firstName, lastName, empRole, mobileNumber, email, street, city, state, postalCode) VALUES
+-- Branch 5: Bree Mobile Surat Thani
+(256605001, 05, 'Nora', 'Carter', 'Manager', 0891112233, 'noracarter@gmail.com', '1/1 Talad Mai Rd', 'Surat Thani', 'Surat Thani', 84000),
+(256605002, 05, 'Oliver', 'Scott', 'Sales Associate', 0892223344, 'oliverscott@gmail.com', '2/2 Talad Mai Rd', 'Surat Thani', 'Surat Thani', 84000),
+(256605003, 05, 'Paul', 'Lewis', 'Sales Associate', 0893334455, 'paullewis@gmail.com', '3/3 Talad Mai Rd', 'Surat Thani', 'Surat Thani', 84000),
+(256605004, 05, 'Quinn', 'Young', 'Sales Associate', 0894445566, 'quinnyoung@gmail.com', '4/4 Talad Mai Rd', 'Surat Thani', 'Surat Thani', 84000),
+(256605005, 05, 'Ryan', 'King', 'Sales Associate', 0895556677, 'ryanking@gmail.com', '5/5 Talad Mai Rd', 'Surat Thani', 'Surat Thani', 84000),
+(256605006, 05, 'Sophia', 'Wright', 'Sales Associate', 0896667788, 'sophiawright@gmail.com', '6/6 Talad Mai Rd', 'Surat Thani', 'Surat Thani', 84000),
+(256605007, 05, 'Tom', 'Green', 'Customer Service', 0897778899, 'tomgreen@gmail.com', '7/7 Talad Mai Rd', 'Surat Thani', 'Surat Thani', 84000),
+(256605008, 05, 'Uma', 'Adams', 'Customer Service', 0898889900, 'umaadams@gmail.com', '8/8 Talad Mai Rd', 'Surat Thani', 'Surat Thani', 84000),
+(256605009, 05, 'Vera', 'Baker', 'Security', 0899991011, 'verabaker@gmail.com', '9/9 Talad Mai Rd', 'Surat Thani', 'Surat Thani', 84000),
+(256605010, 05, 'William', 'Hall', 'Security', 0890121213, 'williamhall@gmail.com', '10/10 Talad Mai Rd', 'Surat Thani', 'Surat Thani', 84000),
+(256605011, 05, 'Xander', 'Hernandez', 'Technician', 0891234345, 'xanderhernandez@gmail.com', '11/11 Talad Mai Rd', 'Surat Thani', 'Surat Thani', 84000),
+(256605012, 05, 'Yara', 'Kingston', 'Technician', 0892345456, 'yarakingston@gmail.com', '12/12 Talad Mai Rd', 'Surat Thani', 'Surat Thani', 84000),
+(256605013, 05, 'Zoe', 'Martinez', 'Janitor', 0893456567, 'zoemartinez@gmail.com', '13/13 Talad Mai Rd', 'Surat Thani', 'Surat Thani', 84000),
+(256605014, 05, 'Aaron', 'Nelson', 'Janitor', 0894567678, 'aaronnelson@gmail.com', '14/14 Talad Mai Rd', 'Surat Thani', 'Surat Thani', 84000),
+
+-- Branch 6: Bree Mobile Nakhon Ratchasima
+(256606001, 06, 'Bella', 'Roberts', 'Manager', 0891113344, 'bellaroberts@gmail.com', '1/1 Mittraphap Rd', 'Nakhon Ratchasima', 'Nakhon Ratchasima', 30000),
+(256606002, 06, 'Charlie', 'Turner', 'Sales Associate', 0892224455, 'charlieturner@gmail.com', '2/2 Mittraphap Rd', 'Nakhon Ratchasima', 'Nakhon Ratchasima', 30000),
+(256606003, 06, 'Diana', 'Parker', 'Sales Associate', 0893335566, 'dianaparker@gmail.com', '3/3 Mittraphap Rd', 'Nakhon Ratchasima', 'Nakhon Ratchasima', 30000),
+(256606004, 06, 'Ethan', 'Roberts', 'Sales Associate', 0894446677, 'ethanroberts@gmail.com', '4/4 Mittraphap Rd', 'Nakhon Ratchasima', 'Nakhon Ratchasima', 30000),
+(256606005, 06, 'Fiona', 'Collins', 'Sales Associate', 0895557788, 'fionacollins@gmail.com', '5/5 Mittraphap Rd', 'Nakhon Ratchasima', 'Nakhon Ratchasima', 30000),
+(256606006, 06, 'George', 'Stewart', 'Sales Associate', 0896668899, 'georgestewart@gmail.com', '6/6 Mittraphap Rd', 'Nakhon Ratchasima', 'Nakhon Ratchasima', 30000),
+(256606007, 06, 'Hannah', 'Hernandez', 'Customer Service', 0897779900, 'hannahhernandez@gmail.com', '7/7 Mittraphap Rd', 'Nakhon Ratchasima', 'Nakhon Ratchasima', 30000),
+(256606008, 06, 'Ian', 'Bennett', 'Customer Service', 0898881011, 'ianbennett@gmail.com', '8/8 Mittraphap Rd', 'Nakhon Ratchasima', 'Nakhon Ratchasima', 30000),
+(256606009, 06, 'Jenna', 'Griffin', 'Security', 0899992122, 'jennagriffin@gmail.com', '9/9 Mittraphap Rd', 'Nakhon Ratchasima', 'Nakhon Ratchasima', 30000),
+(256606010, 06, 'Kyle', 'Murphy', 'Security', 0890123233, 'kylemurphy@gmail.com', '10/10 Mittraphap Rd', 'Nakhon Ratchasima', 'Nakhon Ratchasima', 30000),
+(256606011, 06, 'Laura', 'Green', 'Technician', 0891234344, 'lauragreen@gmail.com', '11/11 Mittraphap Rd', 'Nakhon Ratchasima', 'Nakhon Ratchasima', 30000),
+(256606012, 06, 'Matt', 'Hughes', 'Technician', 0892345455, 'matthughes@gmail.com', '12/12 Mittraphap Rd', 'Nakhon Ratchasima', 'Nakhon Ratchasima', 30000),
+(256606013, 06, 'Nancy', 'Ward', 'Janitor', 0893456566, 'nancyward@gmail.com', '13/13 Mittraphap Rd', 'Nakhon Ratchasima', 'Nakhon Ratchasima', 30000),
+(256606014, 06, 'Oscar', 'Hawkins', 'Janitor', 0894567677, 'oscarhawkins@gmail.com', '14/14 Mittraphap Rd', 'Nakhon Ratchasima', 'Nakhon Ratchasima', 30000),
+
+-- Branch 7: Bree Mobile Udon Thani
+(256607001, 07, 'Paula', 'Foster', 'Manager', 0891114455, 'paulafoster@gmail.com', '1/1 Phosri Rd', 'Udon Thani', 'Udon Thani', 41000),
+(256607002, 07, 'Quincy', 'Diaz', 'Sales Associate', 0892225566, 'quincy.diaz@gmail.com', '2/2 Phosri Rd', 'Udon Thani', 'Udon Thani', 41000),
+(256607003, 07, 'Rita', 'Carroll', 'Sales Associate', 0893336677, 'ritacarroll@gmail.com', '3/3 Phosri Rd', 'Udon Thani', 'Udon Thani', 41000),
+(256607004, 07, 'Sam', 'Sanders', 'Sales Associate', 0894447788, 'samsanders@gmail.com', '4/4 Phosri Rd', 'Udon Thani', 'Udon Thani', 41000),
+(256607005, 07, 'Tina', 'Murray', 'Sales Associate', 0895558899, 'tinamurray@gmail.com', '5/5 Phosri Rd', 'Udon Thani', 'Udon Thani', 41000),
+(256607006, 07, 'Ulysses', 'Franklin', 'Sales Associate', 0896669900, 'ulyssesfranklin@gmail.com', '6/6 Phosri Rd', 'Udon Thani', 'Udon Thani', 41000),
+(256607007, 07, 'Victor', 'Morris', 'Customer Service', 0897771011, 'victormorris@gmail.com', '7/7 Phosri Rd', 'Udon Thani', 'Udon Thani', 41000),
+(256607008, 07, 'Wendy', 'Butler', 'Customer Service', 0898882122, 'wendybutler@gmail.com', '8/8 Phosri Rd', 'Udon Thani', 'Udon Thani', 41000),
+(256607009, 07, 'Xena', 'Riley', 'Security', 0899993233, 'xenariley@gmail.com', '9/9 Phosri Rd', 'Udon Thani', 'Udon Thani', 41000),
+(256607010, 07, 'Yasmine', 'Fleming', 'Security', 0890124344, 'yasminefleming@gmail.com', '10/10 Phosri Rd', 'Udon Thani', 'Udon Thani', 41000),
+(256607011, 07, 'Zane', 'Harrison', 'Technician', 0891235455, 'zaneharrison@gmail.com', '11/11 Phosri Rd', 'Udon Thani', 'Udon Thani', 41000),
+(256607012, 07, 'Amelia', 'Peters', 'Technician', 0892346566, 'ameliapeters@gmail.com', '12/12 Phosri Rd', 'Udon Thani', 'Udon Thani', 41000),
+(256607013, 07, 'Brian', 'Hawkins', 'Janitor', 0893457677, 'brianhawkins@gmail.com', '13/13 Phosri Rd', 'Udon Thani', 'Udon Thani', 41000),
+(256607014, 07, 'Clara', 'Kennedy', 'Janitor', 0894568788, 'clarakennedy@gmail.com', '14/14 Phosri Rd', 'Udon Thani', 'Udon Thani', 41000),
+
+-- Branch 8: Bree Mobile Hat Yai
+(256608001, 08, 'Derek', 'Young', 'Manager', 0891115566, 'derekyoung@gmail.com', '1/1 Sunklan Rd', 'Hat Yai', 'Songkhla', 90110),
+(256608002, 08, 'Eva', 'Sanders', 'Sales Associate', 0892226677, 'evasanders@gmail.com', '2/2 Sunklan Rd', 'Hat Yai', 'Songkhla', 90110),
+(256608003, 08, 'Felix', 'Rivers', 'Sales Associate', 0893337788, 'felixrivers@gmail.com', '3/3 Sunklan Rd', 'Hat Yai', 'Songkhla', 90110),
+(256608004, 08, 'Gina', 'Russell', 'Sales Associate', 0894448899, 'ginarussell@gmail.com', '4/4 Sunklan Rd', 'Hat Yai', 'Songkhla', 90110),
+(256608005, 08, 'Hugo', 'Chapman', 'Sales Associate', 0895559900, 'hugochapman@gmail.com', '5/5 Sunklan Rd', 'Hat Yai', 'Songkhla', 90110),
+(256608006, 08, 'Isla', 'Tucker', 'Sales Associate', 0896661011, 'islatucker@gmail.com', '6/6 Sunklan Rd', 'Hat Yai', 'Songkhla', 90110),
+(256608007, 08, 'James', 'Wagner', 'Customer Service', 0897772122, 'jameswagner@gmail.com', '7/7 Sunklan Rd', 'Hat Yai', 'Songkhla', 90110),
+(256608008, 08, 'Kara', 'Fowler', 'Customer Service', 0898883233, 'karafowler@gmail.com', '8/8 Sunklan Rd', 'Hat Yai', 'Songkhla', 90110),
+(256608009, 08, 'Leo', 'Hicks', 'Security', 0899994344, 'leohicks@gmail.com', '9/9 Sunklan Rd', 'Hat Yai', 'Songkhla', 90110),
+(256608010, 08, 'Mona', 'Woods', 'Security', 0890125455, 'monawoods@gmail.com', '10/10 Sunklan Rd', 'Hat Yai', 'Songkhla', 90110),
+(256608011, 08, 'Nina', 'Ferguson', 'Technician', 0891236566, 'ninaferguson@gmail.com', '11/11 Sunklan Rd', 'Hat Yai', 'Songkhla', 90110),
+(256608012, 08, 'Oscar', 'Murphy', 'Technician', 0892347677, 'oscarmurphy@gmail.com', '12/12 Sunklan Rd', 'Hat Yai', 'Songkhla', 90110),
+(256608013, 08, 'Paige', 'Harrison', 'Janitor', 0893458788, 'paigeharrison@gmail.com', '13/13 Sunklan Rd', 'Hat Yai', 'Songkhla', 90110),
+(256608014, 08, 'Quinn', 'Lloyd', 'Janitor', 0894569899, 'quinnlloyd@gmail.com', '14/14 Sunklan Rd', 'Hat Yai', 'Songkhla', 90110),
+
+-- Branch 9: Bree Mobile Chiang Mai
+(256609001, 09, 'Rick', 'Mason', 'Manager', 0891116677, 'rickmason@gmail.com', '1/1 Nimmanhaemin Rd', 'Chiang Mai', 'Chiang Mai', 50000),
+(256609002, 09, 'Sophie', 'Peters', 'Sales Associate', 0892227788, 'sophie.peters@gmail.com', '2/2 Nimmanhaemin Rd', 'Chiang Mai', 'Chiang Mai', 50000),
+(256609003, 09, 'Tommy', 'Harrison', 'Sales Associate', 0893338899, 'tommy.harrison@gmail.com', '3/3 Nimmanhaemin Rd', 'Chiang Mai', 'Chiang Mai', 50000),
+(256609004, 09, 'Ursula', 'Perry', 'Sales Associate', 0894449900, 'ursulaperry@gmail.com', '4/4 Nimmanhaemin Rd', 'Chiang Mai', 'Chiang Mai', 50000),
+(256609005, 09, 'Vince', 'Simmons', 'Sales Associate', 0895551011, 'vincesimmons@gmail.com', '5/5 Nimmanhaemin Rd', 'Chiang Mai', 'Chiang Mai', 50000),
+(256609006, 09, 'Wendy', 'Parker', 'Sales Associate', 0896662122, 'wendy.parker@gmail.com', '6/6 Nimmanhaemin Rd', 'Chiang Mai', 'Chiang Mai', 50000),
+(256609007, 09, 'Xander', 'Wagner', 'Customer Service', 0897773233, 'xander.wagner@gmail.com', '7/7 Nimmanhaemin Rd', 'Chiang Mai', 'Chiang Mai', 50000),
+(256609008, 09, 'Yara', 'Owen', 'Customer Service', 0898884344, 'yara.owen@gmail.com', '8/8 Nimmanhaemin Rd', 'Chiang Mai', 'Chiang Mai', 50000),
+(256609009, 09, 'Zoe', 'Stevens', 'Security', 0899995455, 'zoe.stevens@gmail.com', '9/9 Nimmanhaemin Rd', 'Chiang Mai', 'Chiang Mai', 50000),
+(256609010, 09, 'Abby', 'Foster', 'Security', 0890126566, 'abby.foster@gmail.com', '10/10 Nimmanhaemin Rd', 'Chiang Mai', 'Chiang Mai', 50000),
+(256609011, 09, 'Bobby', 'James', 'Technician', 0891237677, 'bobby.james@gmail.com', '11/11 Nimmanhaemin Rd', 'Chiang Mai', 'Chiang Mai', 50000),
+(256609012, 09, 'Cathy', 'Long', 'Technician', 0892348788, 'cathy.long@gmail.com', '12/12 Nimmanhaemin Rd', 'Chiang Mai', 'Chiang Mai', 50000),
+(256609013, 09, 'Danny', 'Morris', 'Janitor', 0893459899, 'danny.morris@gmail.com', '13/13 Nimmanhaemin Rd', 'Chiang Mai', 'Chiang Mai', 50000),
+(256609014, 09, 'Ella', 'Harris', 'Janitor', 0894560900, 'ella.harris@gmail.com', '14/14 Nimmanhaemin Rd', 'Chiang Mai', 'Chiang Mai', 50000),
+
+-- Branch 10: Bree Mobile Phuket
+(256610001, 10, 'Frank', 'Young', 'Manager', 0891111110, 'frankyoung@gmail.com', '1/1 Patong Beach', 'Phuket', 'Phuket', 83150),
+(256610002, 10, 'Grace', 'Holt', 'Sales Associate', 0892222221, 'graceholt@gmail.com', '2/2 Patong Beach', 'Phuket', 'Phuket', 83150),
+(256610003, 10, 'Henry', 'Evans', 'Sales Associate', 0893333332, 'henryevans@gmail.com', '3/3 Patong Beach', 'Phuket', 'Phuket', 83150),
+(256610004, 10, 'Isla', 'Powell', 'Sales Associate', 0894444443, 'islapowell@gmail.com', '4/4 Patong Beach', 'Phuket', 'Phuket', 83150),
+(256610005, 10, 'Jack', 'Jameson', 'Sales Associate', 0895555554, 'jackjameson@gmail.com', '5/5 Patong Beach', 'Phuket', 'Phuket', 83150),
+(256610006, 10, 'Kira', 'Morris', 'Sales Associate', 0896666665, 'kiramorris@gmail.com', '6/6 Patong Beach', 'Phuket', 'Phuket', 83150),
+(256610007, 10, 'Liam', 'Hughes', 'Customer Service', 0897777776, 'liamhughes@gmail.com', '7/7 Patong Beach', 'Phuket', 'Phuket', 83150),
+(256610008, 10, 'Mia', 'Price', 'Customer Service', 0898888887, 'miaprice@gmail.com', '8/8 Patong Beach', 'Phuket', 'Phuket', 83150),
+(256610009, 10, 'Noah', 'Hernandez', 'Security', 0899999998, 'noahhernandez@gmail.com', '9/9 Patong Beach', 'Phuket', 'Phuket', 83150),
+(256610010, 10, 'Olivia', 'Bishop', 'Security', 0890123450, 'oliviabishop@gmail.com', '10/10 Patong Beach', 'Phuket', 'Phuket', 83150),
+(256610011, 10, 'Paul', 'Walker', 'Technician', 0891234561, 'paulwalker@gmail.com', '11/11 Patong Beach', 'Phuket', 'Phuket', 83150),
+(256610012, 10, 'Quinn', 'Graham', 'Technician', 0892345672, 'quinngraham@gmail.com', '12/12 Patong Beach', 'Phuket', 'Phuket', 83150),
+(256610013, 10, 'Ray', 'Bailey', 'Janitor', 0893456783, 'raybailey@gmail.com', '13/13 Patong Beach', 'Phuket', 'Phuket', 83150),
+(256610014, 10, 'Sofia', 'Simmons', 'Janitor', 0894567894, 'sofia.simmons@gmail.com', '14/14 Patong Beach', 'Phuket', 'Phuket', 83150);
+
+
+UPDATE EMPLOYEES SET salary=8000;
+UPDATE EMPLOYEES SET salary = 50000 WHERE empRole = 'Manager';
+UPDATE EMPLOYEES SET salary = 30000 WHERE empRole = 'Sales Associate';
+UPDATE EMPLOYEES SET salary = 28000 WHERE empRole = 'Customer Service';
+UPDATE EMPLOYEES SET salary = 25000 WHERE empRole = 'Security';
+UPDATE EMPLOYEES SET salary = 32000 WHERE empRole = 'Technician';
+UPDATE EMPLOYEES SET salary = 22000 WHERE empRole = 'Janitor';
+
+
+
+-- supplier
+INSERT INTO SUPPLIERS (supplierId, supplierName, mobileNumber, email, street, city, state, postalCode) VALUES
+(10001, 'Samsung Electronics', 0212345678, 'contact@samsung.com', '1 Samsung Rd', 'Seoul', 'Seoul', 05545),
+(10002, 'Apple Inc.', 0298765432, 'contact@apple.com', '1 Apple Park Way', 'Cupertino', 'California', 95014),
+(10003, 'Xiaomi Corporation', 0223456789, 'contact@xiaomi.com', '1 Xiaomi Rd', 'Beijing', 'Beijing', 100085),
+(10004, 'Oppo Electronics', 0234567890, 'contact@oppo.com', '1 Oppo Rd', 'Dongguan', 'Guangdong', 523000),
+(10005, 'Huawei Technologies', 0245678901, 'contact@huawei.com', '1 Huawei Rd', 'Shenzhen', 'Guangdong', 518129),
+(10006, 'Sony Corporation', 0256789012, 'contact@sony.com', '1 Sony Rd', 'Tokyo', 'Tokyo', 108-0075),
+(10007, 'LG Electronics', 0267890123, 'contact@lge.com', '1 LG Rd', 'Seoul', 'Seoul', 05760),
+(10008, 'Nokia Corporation', 0278901234, 'contact@nokia.com', '1 Nokia Rd', 'Espoo', 'Uusimaa', 02150),
+(10009, 'Google LLC', 0289012345, 'contact@google.com', '1 Googleplex Rd', 'Mountain View', 'California', 94043),
+(10010, 'OnePlus Technology', 0290123456, 'contact@oneplus.com', '1 OnePlus Rd', 'Shenzhen', 'Guangdong', 518057),
+(10011, 'Realme', 0201234567, 'contact@realme.com', '1 Realme Rd', 'Shenzhen', 'Guangdong', 518129),
+(10012, 'Vivo Communication Technology', 0212345670, 'contact@vivo.com', '1 Vivo Rd', 'Dongguan', 'Guangdong', 523000),
+(10013, 'AsusTek Computer Inc.', 0223456781, 'contact@asus.com', '1 Asus Rd', 'Taipei', 'Taipei', 115),
+(10014, 'Lenovo Group Limited', 0234567892, 'contact@lenovo.com', '1 Lenovo Rd', 'Beijing', 'Beijing', 100088),
+(10015, 'HTC Corporation', 0245678903, 'contact@htc.com', '1 HTC Rd', 'Taoyuan', 'Taoyuan', 333),
+(10016, 'Samsung Electronics', 0212345678, 'contact@samsung.com', '1 Samsung Rd', 'Seoul', 'Seoul', 05545),
+(10017, 'Apple Inc.', 0298765432, 'contact@apple.com', '1 Apple Park Way', 'Cupertino', 'California', 95014),
+(10018, 'Xiaomi Corporation', 0223456789, 'contact@xiaomi.com', '1 Xiaomi Rd', 'Beijing', 'Beijing', 100085),
+(10019, 'Oppo Electronics', 0234567890, 'contact@oppo.com', '1 Oppo Rd', 'Dongguan', 'Guangdong', 523000),
+(10020, 'Huawei Technologies', 0245678901, 'contact@huawei.com', '1 Huawei Rd', 'Shenzhen', 'Guangdong', 518129),
+(10021, 'Sony Corporation', 0256789012, 'contact@sony.com', '1 Sony Rd', 'Tokyo', 'Tokyo', 108-0075),
+(10022, 'LG Electronics', 0267890123, 'contact@lge.com', '1 LG Rd', 'Seoul', 'Seoul', 05760),
+(10023, 'Nokia Corporation', 0278901234, 'contact@nokia.com', '1 Nokia Rd', 'Espoo', 'Uusimaa', 02150),
+(10024, 'Google LLC', 0289012345, 'contact@google.com', '1 Googleplex Rd', 'Mountain View', 'California', 94043),
+(10025, 'OnePlus Technology', 0290123456, 'contact@oneplus.com', '1 OnePlus Rd', 'Shenzhen', 'Guangdong', 518057),
+(10026, 'Realme', 0201234567, 'contact@realme.com', '1 Realme Rd', 'Shenzhen', 'Guangdong', 518129),
+(10027, 'Vivo Communication Technology', 0212345670, 'contact@vivo.com', '1 Vivo Rd', 'Dongguan', 'Guangdong', 523000),
+(10028, 'AsusTek Computer Inc.', 0223456781, 'contact@asus.com', '1 Asus Rd', 'Taipei', 'Taipei', 115),
+(10029, 'Lenovo Group Limited', 0234567892, 'contact@lenovo.com', '1 Lenovo Rd', 'Beijing', 'Beijing', 100088),
+(10030, 'AsusTek Computer Inc.', 0223456781, 'contact@asus.com', '1 Asus Rd', 'Taipei', 'Taipei', 115),
+(10031, 'Blu Products', 3112345678, 'contact@blu.com', '1 Blu Rd', 'Miami', 'Florida', 33101),
+(10032, 'Jio Mobile', 3212345678, 'contact@jio.com', '1 Jio Rd', 'Mumbai', 'Maharashtra', 400001),
+(10033, 'Karbonn Mobile', 3312345678, 'contact@karbonn.com', '1 Karbonn Rd', 'Noida', 'Uttar Pradesh', 201301),
+(10034, 'Oppo Realme', 3412345678, 'contact@oppo.com', '1 Oppo Realme Rd', 'Dongguan', 'Guangdong', 523000),
+(10035, 'Honor View', 3512345678, 'contact@honor.com', '1 Honor View Rd', 'Shenzhen', 'Guangdong', 518057),
+(10036, 'Nubia Mobile', 3612345678, 'contact@nubia.com', '1 Nubia Rd', 'Shenzhen', 'Guangdong', 518057),
+(10037, 'Xgody Mobile', 3712345678, 'contact@xgody.com', '1 Xgody Rd', 'Shenzhen', 'Guangdong', 518057),
+(10038, 'Lava Agni', 3812345678, 'contact@lava.com', '1 Lava Agni Rd', 'Noida', 'Uttar Pradesh', 201301),
+(10039, 'Honor Magic', 3912345678, 'contact@honor.com', '1 Honor Magic Rd', 'Shenzhen', 'Guangdong', 518057),
+(10040, 'Doro Mobile', 4012345678, 'contact@doro.com', '1 Doro Rd', 'Stockholm', 'Stockholm', 11157),
+(10041, 'Sony Xperia', 4112345678, 'contact@sonyxperia.com', '1 Sony Xperia Rd', 'Tokyo', 'Tokyo', 100-0001),
+(10042, 'Acer Liquid', 4212345678, 'contact@acer.com', '1 Acer Liquid Rd', 'Xizhi', 'New Taipei', 22101),
+(10043, 'Sharp Mobile', 4312345678, 'contact@sharp.com', '1 Sharp Rd', 'Osaka', 'Osaka', 530-0001),
+(10044, 'Gigabyte Mobile', 4412345678, 'contact@gigabyte.com', '1 Gigabyte Rd', 'New Taipei', 'Taiwan', 220),
+(10045, 'BenQ Mobile', 4512345678, 'contact@benq.com', '1 BenQ Rd', 'Taipei', 'Taiwan', 106),
+(10046, 'Vizio Mobile', 4612345678, 'contact@vizio.com', '1 Vizio Rd', 'Irvine', 'California', 92618),
+(10047, 'Razer Mobile', 4712345678, 'contact@razer.com', '1 Razer Rd', 'San Francisco', 'California', 94103),
+(10048, 'Alcatel OneTouch', 4812345678, 'contact@alcatel.com', '1 Alcatel OneTouch Rd', 'Paris', 'Île-de-France', 75001),
+(10049, 'Toshiba Dynabook', 4912345678, 'contact@toshiba.com', '1 Toshiba Dynabook Rd', 'Tokyo', 'Tokyo', 100-0001),
+(10050, 'Kyocera Mobile', 5012345678, 'contact@kyocera.com', '1 Kyocera Rd', 'Kyoto', 'Kyoto', 600-0001);
+
+
+
+-- Product--phone
+INSERT INTO PRODUCTS  VALUES
+(100001, 'Galaxy S21', 'P', 23900, 100, 'SM-G991B', 'Phantom Gray', 10001),
+(100002, 'iPhone 12', 'P', 23900, 100, 'A2403', 'Black', 10002),
+(100003, 'Mi 11', 'P', 22400, 100, 'M2101K9AG', 'Horizon Blue', 10003),
+(100004, 'Oppo Find X3', 'P', 34500, 50, 'CPH2173', 'Gloss Black', 10004),
+(100005, 'Huawei P40', 'P', 27000, 75, 'ANA-NX9', 'Silver Frost', 10005),
+(100006, 'Sony Xperia 5 II', 'P', 28500, 30, 'XQ-AS52', 'Black', 10006),
+(100007, 'LG Velvet', 'P', 18900, 90, 'LM-G900N', 'Aurora White', 10007),
+(100008, 'Nokia 8.3', 'P', 20900, 80, 'TA-1258', 'Polar Night', 10008),
+(100009, 'Google Pixel 5', 'P', 20900, 60, 'GD1YQ', 'Just Black', 10009),
+(100010, 'OnePlus 9', 'P', 21900, 100, 'LE2110', 'Winter Mist', 10010),
+(100011, 'Realme GT', 'P', 14900, 120, 'RMX2202', 'Dashing Silver', 10011),
+(100012, 'Vivo V21', 'P', 14900, 150, 'V2056', 'Sunset Dazzle', 10012),
+(100013, 'Asus ROG Phone 5', 'P', 29900, 40, 'ZS676KS', 'Black', 10013),
+(100014, 'Lenovo Legion Phone Duel', 'P', 27900, 20, 'L79031', 'Blaze Blue', 10014),
+(100015, 'HTC U20', 'P', 18900, 55, '2Q8A100', 'Mocha White', 10015),
+(100016, 'Samsung A52', 'P', 10900, 100, 'SM-A525F', 'Awesome Black', 10001),
+(100017, 'iPhone SE', 'P', 12900, 80, 'A2298', 'Product Red', 10002),
+(100018, 'Xiaomi Redmi Note 10', 'P', 6900, 150, 'M2101K7AG', 'Onyx Gray', 10003),
+(100019, 'Oppo Reno5', 'P', 12900, 90, 'CPH2159', 'Starry Black', 10004),
+(100020, 'Huawei Nova 8', 'P', 18900, 70, 'HUAWEI MARA', 'Shimmer Blue', 10005),
+(100021, 'Sony Xperia 10 III', 'P', 12900, 50, 'XQ-BC72', 'Black', 10006),
+(100022, 'LG Wing', 'P', 29900, 30, 'LM-F100N', 'Illusion Sky', 10007),
+(100023, 'Nokia G50', 'P', 10900, 110, 'TA-1352', 'Ocean Blue', 10008),
+(100024, 'Google Pixel 4a', 'P', 10900, 100, 'GD1YQ', 'Just Black', 10009),
+(100025, 'OnePlus Nord', 'P', 12900, 100, 'AC2001', 'Blue Marble', 10010),
+(100026, 'Realme 7', 'P', 6900, 120, 'RMX2151', 'Mist Blue', 10011),
+(100027, 'Vivo Y20', 'P', 5900, 140, 'V2027', 'Purist Blue', 10012),
+(100028, 'Asus Zenfone 8', 'P', 21900, 50, 'ZS590KS', 'Obsidian Black', 10013),
+(100029, 'Lenovo K12', 'P', 4900, 130, 'LIM K12', 'Translucent Blue', 10014),
+(100030, 'HTC Desire 21', 'P', 9900, 60, '2Q9A100', 'Cosmic Blue', 10015),
+(100031, 'Samsung A72', 'P', 12900, 80, 'SM-A725F', 'Awesome White', 10001),
+(100032, 'iPhone 11', 'P', 18900, 90, 'A2223', 'White', 10002),
+(100033, 'Xiaomi Poco X3', 'P', 9900, 150, 'M2007J20CG', 'Shadow Gray', 10003),
+(100034, 'Oppo A54', 'P', 6900, 110, 'CPH2235', 'Fluid Black', 10004),
+(100035, 'Huawei Y6', 'P', 3900, 100, 'AMN-LX9', 'Amber Sun', 10005),
+(100036, 'Sony Xperia L4', 'P', 6900, 70, 'XQ-AX56', 'Black', 10006),
+(100037, 'LG G8 ThinQ', 'P', 12900, 50, 'LM-G820UM', 'New Aurora Black', 10007),
+(100038, 'Nokia 5.4', 'P', 6900, 90, 'TA-1350', 'Polar Night', 10008),
+(100039, 'Google Pixel 4', 'P', 12900, 40, 'G020I', 'Oh So Orange', 10009),
+(100040, 'OnePlus 8T', 'P', 18900, 55, 'KB2003', 'Lunar Silver', 10010),
+(100041, 'Realme 7', 'P', 6900, 80, 'RMX2151', 'Mist Blue', 10011),
+(100042, 'Vivo V20 SE', 'P', 6900, 120, 'V2026', 'Gravity Black', 10012),
+(100043, 'Asus ROG Phone II', 'P', 29900, 30, 'ZS660KL', 'Black', 10013),
+(100044, 'Lenovo Z6 Pro', 'P', 12900, 40, 'L58041', 'Black', 10014),
+(100045, 'HTC U12 Life', 'P', 9900, 50, '2Q6A100', 'Sapphire Blue', 10015),
+(100046, 'Samsung Note 20', 'P', 34500, 45, 'SM-N980F', 'Mystic Bronze', 10001),
+(100047, 'iPhone 13', 'P', 34500, 50, 'A2634', 'Starlight', 10002),
+(100048, 'Xiaomi Mi Mix 4', 'P', 29900, 35, 'M2011J18C', 'Ceramic Black', 10003),
+(100049, 'Oppo Find N', 'P', 59900, 25, 'CPH1721', 'Piano Black', 10004),
+(100050, 'Huawei Mate 40 Pro', 'P', 39900, 30, 'NOH-NX9', 'Mystic Silver', 10005);
+
+
+
+
+
+INSERT INTO PHONES VALUES
+(100001, 'Android', 128, 8, 4000, '2400x1080', 120),
+(100002, 'iOS', 64, 4, 2815, '2532x1170', 60),
+(100003, 'Android', 256, 8, 4600, '2400x1080', 90),
+(100004, 'Android', 256, 12, 4500, '2400x1080', 120),
+(100005, 'Android', 128, 8, 4200, 'FHD+', 90),
+(100006, 'Android', 128, 8, 4000, 'Full HD+', 120),
+(100007, 'Android', 128, 6, 4300, '2460x1080', 60),
+(100008, 'Android', 128, 8, 4500, '2400x1080', 90),
+(100009, 'Android', 128, 8, 4080, 'Full HD+', 90),
+(100010, 'Android', 128, 8, 4500, '2400x1080', 120),
+(100011, 'Android', 128, 8, 4500, '2400x1080', 120),
+(100012, 'Android', 128, 8, 4000, '2400x1080', 90),
+(100013, 'Android', 256, 12, 6000, '2448x1080', 144),
+(100014, 'Android', 128, 12, 5000, '2340x1080', 144),
+(100015, 'Android', 128, 6, 4500, 'FHD+', 60),
+(100016, 'Android', 128, 8, 4500, '2400x1080', 90),
+(100017, 'iOS', 64, 4, 2018, '1334x750', 60),
+(100018, 'Android', 64, 4, 5000, '2400x1080', 90),
+(100019, 'Android', 128, 8, 4310, '2400x1080', 90),
+(100020, 'Android', 128, 8, 4200, '2400x1080', 90),
+(100021, 'Android', 128, 6, 4500, '2400x1080', 60),
+(100022, 'Android', 256, 12, 4000, '2460x1080', 90),
+(100023, 'Android', 128, 8, 5000, '2400x1080', 60),
+(100024, 'Android', 128, 6, 4080, 'FHD+', 60),
+(100025, 'Android', 128, 8, 4500, '2400x1080', 90),
+(100026, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100027, 'Android', 64, 4, 5000, '720x1600', 60),
+(100028, 'Android', 128, 8, 4000, '2400x1080', 90),
+(100029, 'Android', 64, 4, 5000, '1600x720', 60),
+(100030, 'Android', 128, 8, 5000, '2400x1080', 90),
+(100031, 'Android', 128, 8, 5000, '2400x1080', 90),
+(100032, 'iOS', 64, 4, 3110, '1792x828', 60),
+(100033, 'Android', 128, 6, 5160, '2400x1080', 120),
+(100034, 'Android', 128, 4, 5000, '2400x1080', 90),
+(100035, 'Android', 32, 3, 3000, '720x1560', 60),
+(100036, 'Android', 128, 4, 3580, '1640x720', 60),
+(100037, 'Android', 128, 6, 3500, '1440x3120', 60),
+(100038, 'Android', 64, 4, 4000, '2400x1080', 90),
+(100039, 'Android', 64, 4, 3140, '2280x1080', 60),
+(100040, 'Android', 128, 12, 4500, '2400x1080', 90),
+(100041, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100042, 'Android', 128, 8, 5000, '2400x1080', 90),
+(100043, 'Android', 256, 12, 4000, '2400x1080', 90),
+(100044, 'Android', 128, 6, 4000, '2340x1080', 60),
+(100045, 'Android', 64, 4, 3600, 'FHD+', 60),
+(100046, 'Android', 256, 12, 4500, '2400x1080', 120),
+(100047, 'iOS', 128, 4, 3240, '2532x1170', 60),
+(100048, 'Android', 256, 12, 4500, 'WQHD+', 120),
+(100049, 'Android', 256, 12, 4500, '2400x1080', 120),
+(100050, 'Android', 256, 12, 4400, 'FHD+', 90);
+
+
+-- product cover
+-- Covers
+INSERT INTO PRODUCTS VALUES
+(200001, 'Galaxy S21 Clear Case', 'A', 350, 100, 'EF-QG991C', 'Clear', 10001),
+(200002, 'Galaxy S21 Leather Case', 'A', 550, 80, 'EF-VG991L', 'Black', 10001),
+(200003, 'Galaxy S21 Silicone Case', 'A', 450, 90, 'EF-QG991S', 'Pink', 10001),
+(200004, 'iPhone 12 Clear Case', 'A', 400, 100, 'MHLF2AM/A', 'Clear', 10002),
+(200005, 'iPhone 12 Leather Case', 'A', 600, 75, 'MHLH3AM/A', 'Midnight', 10002),
+(200006, 'iPhone 12 Silicone Case', 'A', 500, 85, 'MHLH1AM/A', 'Navy', 10002),
+(200007, 'Mi 11 Clear Case', 'A', 350, 90, 'MI11CLEAR', 'Clear', 10003),
+(200008, 'Mi 11 Leather Case', 'A', 600, 80, 'MI11LEATHER', 'Black', 10003),
+(200009, 'Mi 11 Silicone Case', 'A', 500, 70, 'MI11SILICONE', 'Blue', 10003),
+(200010, 'Oppo Find X3 Clear Case', 'A', 400, 100, 'OPPOFINDX3CLEAR', 'Clear', 10004),
+(200011, 'Oppo Find X3 Leather Case', 'A', 650, 90, 'OPPOFINDX3LEATHER', 'Brown', 10004),
+(200012, 'Oppo Find X3 Silicone Case', 'A', 500, 80, 'OPPOFINDX3SILICONE', 'Red', 10004),
+(200013, 'Huawei P40 Clear Case', 'A', 380, 100, 'HUAWEIP40CLEAR', 'Clear', 10005),
+(200014, 'Huawei P40 Leather Case', 'A', 600, 75, 'HUAWEIP40LEATHER', 'Green', 10005),
+(200015, 'Huawei P40 Silicone Case', 'A', 450, 80, 'HUAWEIP40SILICONE', 'Purple', 10005),
+(200016, 'Sony Xperia 5 II Clear Case', 'A', 400, 100, 'XQ-CLEAR', 'Clear', 10006),
+(200017, 'Sony Xperia 5 II Leather Case', 'A', 600, 75, 'XQ-LEATHER', 'Black', 10006),
+(200018, 'Sony Xperia 5 II Silicone Case', 'A', 500, 80, 'XQ-SILICONE', 'Gray', 10006),
+(200019, 'LG Velvet Clear Case', 'A', 380, 100, 'LGVELVETCLEAR', 'Clear', 10007),
+(200020, 'LG Velvet Leather Case', 'A', 600, 75, 'LGVELVETLEATHER', 'White', 10007),
+(200021, 'LG Velvet Silicone Case', 'A', 450, 80, 'LGVELVETSILICONE', 'Black', 10007),
+(200022, 'Nokia 8.3 Clear Case', 'A', 400, 100, 'Nokia8.3CLEAR', 'Clear', 10008),
+(200023, 'Nokia 8.3 Leather Case', 'A', 600, 75, 'Nokia8.3LEATHER', 'Blue', 10008),
+(200024, 'Nokia 8.3 Silicone Case', 'A', 450, 80, 'Nokia8.3SILICONE', 'Dark Blue', 10008),
+(200025, 'Google Pixel 5 Clear Case', 'A', 350, 100, 'GP5CLEAR', 'Clear', 10009),
+(200026, 'Google Pixel 5 Leather Case', 'A', 550, 75, 'GP5LEATHER', 'Black', 10009),
+(200027, 'Google Pixel 5 Silicone Case', 'A', 450, 80, 'GP5SILICONE', 'White', 10009),
+(200028, 'OnePlus 9 Clear Case', 'A', 380, 100, 'OP9CLEAR', 'Clear', 10010),
+(200029, 'OnePlus 9 Leather Case', 'A', 600, 75, 'OP9LEATHER', 'Black', 10010),
+(200030, 'OnePlus 9 Silicone Case', 'A', 450, 80, 'OP9SILICONE', 'Red', 10010),
+(200031, 'Realme GT Clear Case', 'A', 350, 100, 'RGTCLEAR', 'Clear', 10011),
+(200032, 'Realme GT Leather Case', 'A', 550, 75, 'RGTLEATHER', 'Blue', 10011),
+(200033, 'Realme GT Silicone Case', 'A', 450, 80, 'RGTSILICONE', 'Green', 10011),
+(200034, 'Vivo V21 Clear Case', 'A', 350, 100, 'VV21CLEAR', 'Clear', 10012),
+(200035, 'Vivo V21 Leather Case', 'A', 550, 75, 'VV21LEATHER', 'Pink', 10012),
+(200036, 'Vivo V21 Silicone Case', 'A', 450, 80, 'VV21SILICONE', 'Black', 10012),
+(200037, 'Asus ROG Phone 5 Clear Case', 'A', 400, 100, 'AROGCLEAR', 'Clear', 10013),
+(200038, 'Asus ROG Phone 5 Leather Case', 'A', 600, 75, 'AROGLEATHER', 'Black', 10013),
+(200039, 'Asus ROG Phone 5 Silicone Case', 'A', 500, 80, 'AROGSILICONE', 'Red', 10013),
+(200040, 'Lenovo Legion Phone Duel Clear Case', 'A', 400, 100, 'LLPCLEAR', 'Clear', 10014),
+(200041, 'Lenovo Legion Phone Duel Leather Case', 'A', 600, 75, 'LLPLEATHER', 'Black', 10014),
+(200042, 'Lenovo Legion Phone Duel Silicone Case', 'A', 500, 80, 'LLPSILICONE', 'Green', 10014),
+(200043, 'HTC U20 Clear Case', 'A', 350, 100, 'HTCU20CLEAR', 'Clear', 10015),
+(200044, 'HTC U20 Leather Case', 'A', 550, 75, 'HTCU20LEATHER', 'Brown', 10015),
+(200045, 'HTC U20 Silicone Case', 'A', 450, 80, 'HTCU20SILICONE', 'Black', 10015),
+(200046, 'Samsung A52 Clear Case', 'A', 350, 100, 'SA52CLEAR', 'Clear', 10001),
+(200047, 'Samsung A52 Leather Case', 'A', 550, 75, 'SA52LEATHER', 'Black', 10001),
+(200048, 'Samsung A52 Silicone Case', 'A', 450, 80, 'SA52SILICONE', 'Pink', 10001),
+(200049, 'iPhone SE Clear Case', 'A', 400, 100, 'ISECLEAR', 'Clear', 10002),
+(200050, 'iPhone SE Leather Case', 'A', 600, 75, 'ISELEATHER', 'Red', 10002),
+(200051, 'iPhone SE Silicone Case', 'A', 500, 80, 'ISESILICONE', 'Black', 10002),
+(200052, 'Xiaomi Redmi Note 10 Clear Case', 'A', 350, 100, 'XRN10CLEAR', 'Clear', 10003),
+(200053, 'Xiaomi Redmi Note 10 Leather Case', 'A', 550, 75, 'XRN10LEATHER', 'Blue', 10003),
+(200054, 'Xiaomi Redmi Note 10 Silicone Case', 'A', 450, 80, 'XRN10SILICONE', 'Black', 10003),
+(200055, 'Oppo Reno5 Clear Case', 'A', 400, 100, 'ORECLEAR', 'Clear', 10004),
+(200056, 'Oppo Reno5 Leather Case', 'A', 600, 75, 'ORELEATHER', 'Black', 10004),
+(200057, 'Oppo Reno5 Silicone Case', 'A', 500, 80, 'ORESILICONE', 'Gray', 10004),
+(200058, 'Huawei P40 Pro Clear Case', 'A', 380, 100, 'HUAWEIP40PROCLEAR', 'Clear', 10005),
+(200059, 'Huawei P40 Pro Leather Case', 'A', 600, 75, 'HUAWEIP40PROLEATHER', 'Blue', 10005),
+(200060, 'Huawei P40 Pro Silicone Case', 'A', 450, 80, 'HUAWEIP40PROSILICONE', 'Black', 10005),
+(200061, 'Samsung A32 Clear Case', 'A', 350, 100, 'SA32CLEAR', 'Clear', 10001),
+(200062, 'Samsung A32 Leather Case', 'A', 550, 75, 'SA32LEATHER', 'Green', 10001),
+(200063, 'Samsung A32 Silicone Case', 'A', 450, 80, 'SA32SILICONE', 'Pink', 10001),
+(200064, 'iPhone 13 Pro Clear Case', 'A', 400, 100, 'IP13PCLEAR', 'Clear', 10002),
+(200065, 'iPhone 13 Pro Leather Case', 'A', 600, 75, 'IP13PLEATHER', 'Midnight', 10002),
+(200066, 'iPhone 13 Pro Silicone Case', 'A', 500, 80, 'IP13PSILICONE', 'Gold', 10002),
+(200067, 'Nokia 7.2 Clear Case', 'A', 380, 100, 'N72CLEAR', 'Clear', 10008),
+(200068, 'Nokia 7.2 Leather Case', 'A', 600, 75, 'N72LEATHER', 'Black', 10008),
+(200069, 'Nokia 7.2 Silicone Case', 'A', 450, 80, 'N72SILICONE', 'Red', 10008),
+(200070, 'Motorola Edge 20 Clear Case', 'A', 400, 100, 'ME20CLEAR', 'Clear', 10016),
+(200071, 'Motorola Edge 20 Leather Case', 'A', 600, 75, 'ME20LEATHER', 'Brown', 10016),
+(200072, 'Motorola Edge 20 Silicone Case', 'A', 500, 80, 'ME20SILICONE', 'Gray', 10016),
+(200073, 'Lenovo K12 Clear Case', 'A', 350, 100, 'LK12CLEAR', 'Clear', 10014),
+(200074, 'Lenovo K12 Leather Case', 'A', 550, 75, 'LK12LEATHER', 'Black', 10014),
+(200075, 'Lenovo K12 Silicone Case', 'A', 450, 80, 'LK12SILICONE', 'Green', 10014),
+(200076, 'ZTE Axon 20 Clear Case', 'A', 350, 100, 'ZAX20CLEAR', 'Clear', 10017),
+(200077, 'ZTE Axon 20 Leather Case', 'A', 550, 75, 'ZAX20LEATHER', 'Brown', 10017),
+(200078, 'ZTE Axon 20 Silicone Case', 'A', 450, 80, 'ZAX20SILICONE', 'Gray', 10017),
+(200079, 'BlackBerry KEY2 Clear Case', 'A', 350, 100, 'BK2CLEAR', 'Clear', 10018),
+(200080, 'BlackBerry KEY2 Leather Case', 'A', 550, 75, 'BK2LEATHER', 'Black', 10018),
+(200081, 'BlackBerry KEY2 Silicone Case', 'A', 450, 80, 'BK2SILICONE', 'Red', 10018),
+(200082, 'Honor 30 Clear Case', 'A', 400, 100, 'H30CLEAR', 'Clear', 10019),
+(200083, 'Honor 30 Leather Case', 'A', 600, 75, 'H30LEATHER', 'White', 10019),
+(200084, 'Honor 30 Silicone Case', 'A', 500, 80, 'H30SILICONE', 'Black', 10019),
+(200085, 'Alcatel 3 Clear Case', 'A', 350, 100, 'A3CLEAR', 'Clear', 10020),
+(200086, 'Alcatel 3 Leather Case', 'A', 550, 75, 'A3LEATHER', 'Blue', 10020),
+(200087, 'Alcatel 3 Silicone Case', 'A', 450, 80, 'A3SILICONE', 'Red', 10020),
+(200088, 'TCL 20 Clear Case', 'A', 350, 100, 'TCL20CLEAR', 'Clear', 10021),
+(200089, 'TCL 20 Leather Case', 'A', 550, 75, 'TCL20LEATHER', 'Black', 10021),
+(200090, 'TCL 20 Silicone Case', 'A', 450, 80, 'TCL20SILICONE', 'Gray', 10021),
+(200091, 'Vivo Y20 Clear Case', 'A', 350, 100, 'VY20CLEAR', 'Clear', 10022),
+(200092, 'Vivo Y20 Leather Case', 'A', 550, 75, 'VY20LEATHER', 'Pink', 10022),
+(200093, 'Vivo Y20 Silicone Case', 'A', 450, 80, 'VY20SILICONE', 'Blue', 10022),
+(200094, 'Infinix Zero 8 Clear Case', 'A', 350, 100, 'IZ8CLEAR', 'Clear', 10023),
+(200095, 'Infinix Zero 8 Leather Case', 'A', 550, 75, 'IZ8LEATHER', 'Black', 10023),
+(200096, 'Infinix Zero 8 Silicone Case', 'A', 450, 80, 'IZ8SILICONE', 'Red', 10023),
+(200097, 'Gionee M12 Clear Case', 'A', 350, 100, 'GM12CLEAR', 'Clear', 10024),
+(200098, 'Gionee M12 Leather Case', 'A', 550, 75, 'GM12LEATHER', 'Brown', 10024),
+(200099, 'Gionee M12 Silicone Case', 'A', 450, 80, 'GM12SILICONE', 'Gray', 10024),
+(200100, 'Micromax IN 1 Clear Case', 'A', 350, 100, 'MIN1CLEAR', 'Clear', 10025),
+(200101, 'Micromax IN 1 Leather Case', 'A', 550, 75, 'MIN1LEATHER', 'Blue', 10025),
+(200102, 'Micromax IN 1 Silicone Case', 'A', 450, 80, 'MIN1SILICONE', 'Red', 10025),
+(200103, 'Nokia 5.4 Clear Case', 'A', 380, 100, 'N54CLEAR', 'Clear', 10008),
+(200104, 'Nokia 5.4 Leather Case', 'A', 600, 75, 'N54LEATHER', 'Black', 10008),
+(200105, 'Nokia 5.4 Silicone Case', 'A', 450, 80, 'N54SILICONE', 'Gray', 10008),
+(200106, 'Realme 7 Clear Case', 'A', 350, 100, 'R7CLEAR', 'Clear', 10011),
+(200107, 'Realme 7 Leather Case', 'A', 550, 75, 'R7LEATHER', 'Brown', 10011),
+(200108, 'Realme 7 Silicone Case', 'A', 450, 80, 'R7SILICONE', 'Green', 10011),
+(200109, 'Poco X3 Clear Case', 'A', 350, 100, 'PX3CLEAR', 'Clear', 10026),
+(200110, 'Poco X3 Leather Case', 'A', 550, 75, 'PX3LEATHER', 'Black', 10026),
+(200111, 'Poco X3 Silicone Case', 'A', 450, 80, 'PX3SILICONE', 'Gray', 10026),
+(200112, 'Oppo A54 Clear Case', 'A', 350, 100, 'OA54CLEAR', 'Clear', 10004),
+(200113, 'Oppo A54 Leather Case', 'A', 550, 75, 'OA54LEATHER', 'Blue', 10004),
+(200114, 'Oppo A54 Silicone Case', 'A', 450, 80, 'OA54SILICONE', 'Pink', 10004),
+(200115, 'Tecno Spark 7 Clear Case', 'A', 350, 100, 'TS7CLEAR', 'Clear', 10027),
+(200116, 'Tecno Spark 7 Leather Case', 'A', 550, 75, 'TS7LEATHER', 'Red', 10027),
+(200117, 'Tecno Spark 7 Silicone Case', 'A', 450, 80, 'TS7SILICONE', 'Black', 10027),
+(200118, 'Vivo X50 Clear Case', 'A', 350, 100, 'VX50CLEAR', 'Clear', 10022),
+(200119, 'Vivo X50 Leather Case', 'A', 550, 75, 'VX50LEATHER', 'Blue', 10022),
+(200120, 'Vivo X50 Silicone Case', 'A', 450, 80, 'VX50SILICONE', 'Pink', 10022),
+(200121, 'Honor X20 Clear Case', 'A', 350, 100, 'HX20CLEAR', 'Clear', 10019),
+(200122, 'Honor X20 Leather Case', 'A', 550, 75, 'HX20LEATHER', 'Brown', 10019),
+(200123, 'Honor X20 Silicone Case', 'A', 450, 80, 'HX20SILICONE', 'Gray', 10019),
+(200124, 'ZTE Nubia Red Magic Clear Case', 'A', 400, 100, 'ZNRMCLEAR', 'Clear', 10017),
+(200125, 'ZTE Nubia Red Magic Leather Case', 'A', 600, 75, 'ZNRMLEATHER', 'Black', 10017),
+(200126, 'ZTE Nubia Red Magic Silicone Case', 'A', 500, 80, 'ZNRMSILICONE', 'Green', 10017),
+(200127, 'Alcatel 5 Clear Case', 'A', 350, 100, 'A5CLEAR', 'Clear', 10020),
+(200128, 'Alcatel 5 Leather Case', 'A', 550, 75, 'A5LEATHER', 'Red', 10020),
+(200129, 'Alcatel 5 Silicone Case', 'A', 450, 80, 'A5SILICONE', 'Blue', 10020),
+(200130, 'Honor V30 Clear Case', 'A', 350, 100, 'HV30CLEAR', 'Clear', 10019),
+(200131, 'Honor V30 Leather Case', 'A', 550, 75, 'HV30LEATHER', 'Pink', 10019),
+(200132, 'Honor V30 Silicone Case', 'A', 450, 80, 'HV30SILICONE', 'Gray', 10019),
+(200133, 'Meizu 17 Clear Case', 'A', 350, 100, 'M17CLEAR', 'Clear', 10028),
+(200134, 'Meizu 17 Leather Case', 'A', 550, 75, 'M17LEATHER', 'Black', 10028),
+(200135, 'Meizu 17 Silicone Case', 'A', 450, 80, 'M17SILICONE', 'Red', 10028),
+(200136, 'Oppo F19 Clear Case', 'A', 350, 100, 'OF19CLEAR', 'Clear', 10004),
+(200137, 'Oppo F19 Leather Case', 'A', 550, 75, 'OF19LEATHER', 'Blue', 10004),
+(200138, 'Oppo F19 Silicone Case', 'A', 450, 80, 'OF19SILICONE', 'Pink', 10004),
+(200139, 'Nokia 6.2 Clear Case', 'A', 380, 100, 'N62CLEAR', 'Clear', 10008),
+(200140, 'Nokia 6.2 Leather Case', 'A', 600, 75, 'N62LEATHER', 'Black', 10008),
+(200141, 'Nokia 6.2 Silicone Case', 'A', 450, 80, 'N62SILICONE', 'Gray', 10008),
+(200142, 'Blackview A80 Clear Case', 'A', 350, 100, 'BVA80CLEAR', 'Clear', 10029),
+(200143, 'Blackview A80 Leather Case', 'A', 550, 75, 'BVA80LEATHER', 'Black', 10029),
+(200144, 'Blackview A80 Silicone Case', 'A', 450, 80, 'BVA80SILICONE', 'Red', 10029),
+(200145, 'ZTE Blade A3 Clear Case', 'A', 350, 100, 'ZBA3CLEAR', 'Clear', 10030),
+(200146, 'ZTE Blade A3 Leather Case', 'A', 550, 75, 'ZBA3LEATHER', 'Blue', 10030),
+(200147, 'ZTE Blade A3 Silicone Case', 'A', 450, 80, 'ZBA3SILICONE', 'Green', 10030),
+(200148, 'Vivo V21e Clear Case', 'A', 350, 100, 'VV21ECLEAR', 'Clear', 10012),
+(200149, 'Vivo V21e Leather Case', 'A', 550, 75, 'VV21ELEATHER', 'Pink', 10012),
+(200150, 'Vivo V21e Silicone Case', 'A', 450, 80, 'VV21ESILICONE', 'Black', 10012);
+
+
+
+-- product-charger- Chargers
+INSERT INTO PRODUCTS VALUES
+(300001, 'Samsung Fast Charger', 'A', 1200, 200, 'EP-TA800', 'White', 10001),
+(300002, 'Apple 20W USB-C Power Adapter', 'A', 990, 150, 'A2244', 'White', 10002),
+(300003, 'Xiaomi 33W Fast Charger', 'A', 850, 180, 'MDY-11-EZ', 'White', 10003),
+(300004, 'Oppo 50W SuperVOOC Charger', 'A', 1350, 100, 'AK779', 'White', 10004),
+(300005, 'Huawei 40W SuperCharge', 'A', 1150, 120, 'HW-100400C00', 'White', 10005),
+(300006, 'Sony 18W Fast Charger', 'A', 750, 90, 'UCH32C', 'Black', 10006),
+(300007, 'LG Fast Charger', 'A', 800, 160, 'MCS-04W', 'White', 10007),
+(300008, 'Nokia 18W Fast Charger', 'A', 850, 110, 'AC-18X', 'Black', 10008),
+(300009, 'Google 18W USB-C Power Adapter', 'A', 900, 130, 'G019B', 'White', 10009),
+(300010, 'OnePlus Warp Charge 30', 'A', 1000, 140, 'B303A', 'Red', 10010),
+(300011, 'Realme 65W SuperDart Charger', 'A', 1350, 150, 'VCA7JACH', 'Yellow', 10011),
+(300012, 'Vivo 44W FlashCharge', 'A', 1300, 170, 'AP32', 'Black', 10012),
+(300013, 'Asus 30W HyperCharge', 'A', 1600, 60, 'C1701C', 'Black', 10013),
+(300014, 'Lenovo 27W Turbo Charger', 'A', 1200, 80, 'SC-27W', 'White', 10014),
+(300015, 'HTC Quick Charge 3.0 Charger', 'A', 900, 100, 'C-P600', 'White', 10015),
+(300016, 'Samsung 45W Super Fast Charger', 'A', 1600, 130, 'EP-TA845', 'Black', 10001),
+(300017, 'Apple 30W USB-C Power Adapter', 'A', 1500, 90, 'A1882', 'White', 10002),
+(300018, 'Xiaomi 67W Turbo Charger', 'A', 1600, 120, 'MDY-12-ET', 'White', 10003),
+(300019, 'Oppo 65W SuperVOOC 2.0 Charger', 'A', 1450, 110, 'AK779', 'White', 10004),
+(300020, 'Huawei 66W SuperCharge', 'A', 1500, 115, 'HW-200400C00', 'White', 10005),
+(300021, 'Sony 30W Quick Charger', 'A', 1100, 90, 'UCH32C', 'Black', 10006),
+(300022, 'LG 25W Fast Charger', 'A', 950, 160, 'MCS-25W', 'White', 10007),
+(300023, 'Nokia 30W Fast Charger', 'A', 1100, 110, 'AC-30X', 'Black', 10008),
+(300024, 'Google 30W USB-C Power Adapter', 'A', 1200, 130, 'G020B', 'White', 10009),
+(300025, 'OnePlus Warp Charge 65', 'A', 1500, 150, 'B353A', 'Red', 10010),
+(300026, 'Realme 50W SuperDart Charger', 'A', 1400, 160, 'VCA7AACH', 'Yellow', 10011),
+(300027, 'Vivo 66W FlashCharge', 'A', 1550, 170, 'AP66', 'Black', 10012),
+(300028, 'Asus 65W HyperCharge', 'A', 1700, 60, 'C1901C', 'Black', 10013),
+(300029, 'Lenovo 50W Turbo Charger', 'A', 1500, 80, 'SC-50W', 'White', 10014),
+(300030, 'HTC Quick Charge 4.0 Charger', 'A', 1100, 100, 'C-P700', 'White', 10015),
+(300031, 'Samsung 25W Super Fast Charger', 'A', 1200, 140, 'EP-TA800', 'White', 10001),
+(300032, 'Apple 18W USB-C Power Adapter', 'A', 950, 150, 'A2244', 'White', 10002),
+(300033, 'Xiaomi 50W Fast Charger', 'A', 1350, 120, 'MDY-10-EF', 'White', 10003),
+(300034, 'Oppo 18W Fast Charger', 'A', 900, 100, 'AK779', 'White', 10004),
+(300035, 'Huawei 22.5W Fast Charger', 'A', 1050, 130, 'HW-100225C00', 'White', 10005),
+(300036, 'Sony 18W Fast Charger', 'A', 850, 90, 'UCH32C', 'Black', 10006),
+(300037, 'LG 18W Quick Charger', 'A', 950, 160, 'MCS-18W', 'White', 10007),
+(300038, 'Nokia 22W Quick Charger', 'A', 1050, 110, 'AC-22X', 'Black', 10008),
+(300039, 'Google 22W USB-C Power Adapter', 'A', 1100, 130, 'G019B', 'White', 10009),
+(300040, 'OnePlus Warp Charge 30', 'A', 1000, 140, 'B313A', 'Red', 10010),
+(300041, 'Realme 65W SuperDart Charger', 'A', 1350, 150, 'VCA8JACH', 'Yellow', 10011),
+(300042, 'Vivo 44W FlashCharge', 'A', 1300, 170, 'AP42', 'Black', 10012),
+(300043, 'Asus 30W HyperCharge', 'A', 1600, 60, 'C1401C', 'Black', 10013),
+(300044, 'Lenovo 30W Turbo Charger', 'A', 1200, 80, 'SC-30W', 'White', 10014),
+(300045, 'HTC Quick Charge 3.0 Charger', 'A', 900, 100, 'C-P600', 'White', 10015),
+(300046, 'Samsung 45W Super Fast Charger', 'A', 1600, 130, 'EP-TA845', 'Black', 10001),
+(300047, 'Apple 30W USB-C Power Adapter', 'A', 1500, 90, 'A1882', 'White', 10002),
+(300048, 'Xiaomi 67W Turbo Charger', 'A', 1600, 120, 'MDY-12-ET', 'White', 10003),
+(300049, 'Oppo 65W SuperVOOC 2.0 Charger', 'A', 1450, 110, 'AK779', 'White', 10004),
+(300050, 'Huawei 66W SuperCharge', 'A', 1500, 115, 'HW-200400C00', 'White', 10005);
+
+-- product -headset
+INSERT INTO PRODUCTS VALUES
+(400001, 'Galaxy Buds Pro', 'A', 5990, 200, 'SM-R190', 'Phantom Silver', 10001),
+(400002, 'AirPods Pro', 'A', 7490, 150, 'A2083', 'White', 10002),
+(400003, 'Mi True Wireless Earbuds', 'A', 1990, 180, 'TWSEJ04LS', 'Black', 10003),
+(400004, 'Oppo Enco X', 'A', 6990, 100, 'EHC00', 'White', 10004),
+(400005, 'Huawei FreeBuds Pro', 'A', 5990, 120, '55021134', 'Silver', 10005),
+(400006, 'Sony WF-1000XM4', 'A', 8490, 90, 'WFE1000XM4', 'Black', 10006),
+(400007, 'LG Tone Free FN7', 'A', 5490, 160, 'HBS-FN7', 'Black', 10007),
+(400008, 'Nokia Wireless Earbuds', 'A', 2490, 110, 'BH-205', 'White', 10008),
+(400009, 'Google Pixel Buds A-Series', 'A', 6990, 130, 'GA01899', 'Clearly White', 10009),
+(400010, 'OnePlus Buds Z', 'A', 3490, 140, 'B2201', 'Gray', 10010),
+(400011, 'Realme Buds Q', 'A', 1990, 150, 'RMA2010', 'Black', 10011),
+(400012, 'Vivo TWS Neo', 'A', 3990, 170, 'V2025', 'Blue', 10012),
+(400013, 'Asus ROG Cetra', 'A', 3990, 60, 'ROG-Cetra', 'Black', 10013),
+(400014, 'Lenovo Smart Wireless Earbuds', 'A', 2990, 80, 'LRA200', 'Black', 10014),
+(400015, 'HTC U Ear', 'A', 1990, 100, '2Q9A100', 'Mocha White', 10015),
+(400016, 'Samsung Galaxy Buds Live', 'A', 5490, 100, 'SM-R180', 'Mystic Bronze', 10001),
+(400017, 'AirPods 2', 'A', 4490, 80, 'A2032', 'White', 10002),
+(400018, 'Xiaomi Mi Air 2', 'A', 2490, 150, 'TWSEJ01JY', 'Black', 10003),
+(400019, 'Oppo Enco W31', 'A', 2990, 90, 'EHC00', 'Black', 10004), -- edited
+(400020, 'Huawei FreeBuds 3', 'A', 4990, 115, '55021023', 'Black', 10005),
+(400021, 'Sony WF-SP800N', 'A', 6990, 90, 'WF-SP800N', 'Black', 10006),
+(400022, 'LG Tone Free FN6', 'A', 4990, 160, 'HBS-FN6', 'White', 10007),
+(400023, 'Nokia Power Earbuds Lite', 'A', 3490, 110, 'BH-205', 'Gray', 10008),
+(400024, 'Google Pixel Buds', 'A', 8490, 130, 'GA00798', 'Black',10009),
+(400025, 'OnePlus Buds', 'A', 3990, 100, 'B1001', 'Black',10010),
+(400026, 'Realme Buds Air 2', 'A', 2490, 120, 'RMA2013', 'Black',10011),
+(400027, 'Vivo TWS 3', 'A', 3990, 140, 'V2026', 'Black',10012),
+(400028, 'Asus ROG Strix Go', 'A', 4490, 30, 'ROG-Go', 'Black',10013),
+(400029, 'Lenovo Yoga Headphones', 'A', 2990, 130, 'LHA200', 'Black',10014),
+(400030, 'HTC Desire 21 Headphones', 'A', 2990, 50, '2Q9A100', 'Black',10015),
+(400031, 'Samsung Galaxy Buds2', 'A', 6490, 140, 'SM-R177', 'Black',10001),
+(400032, 'AirPods Max', 'A', 15990, 90, 'A1948', 'Black',10002),
+(400033, 'Xiaomi Redmi AirDots', 'A', 1290, 150, 'TWSEJ01ZM', 'Black',10003),
+(400034, 'Oppo Enco Q1', 'A', 4490, 110, 'EHC00', 'Black',10004),
+(400035, 'Huawei FreeBuds Lite', 'A', 1990, 30, '55021135', 'Black',10005),
+(400036, 'Sony WH-1000XM4', 'A', 12990, 70, 'WH-1000XM4', 'Black',10006),
+(400037, 'LG HBS-SL5', 'A', 2990, 50, 'HBS-SL5', 'Black',10007),
+(400038, 'Nokia E3100', 'A', 2490, 90, 'BH-205', 'Black',10008),
+(400039, 'Google Nest Audio', 'A', 4490, 40, 'GA01330', 'Black',10009),
+(400040, 'OnePlus Buds Pro', 'A', 7990, 55, 'B2201', 'Black',10010),
+(400041, 'Realme Buds Air', 'A', 2990, 80, 'RMA2010', 'Black',10011),
+(400042, 'Vivo TWS 3', 'A', 3990, 120, 'V2026', 'Black',10012),
+(400043, 'Asus Zenfone 8 Headset', 'A', 3490, 30, 'ZS590KS', 'Black',10013),
+(400044, 'Lenovo 100 Headphones', 'A', 1990, 40, 'L100', 'Black',10014),
+(400045, 'HTC Desire 21 Headphones', 'A', 2990, 50, '2Q9A100', 'Black',10015),
+(400046, 'Samsung Level U', 'A', 2990, 45, 'EO-BG930C', 'Black',10001),
+(400047, 'iPhone EarPods', 'A', 1290, 50, 'MMTN2AM/A', 'Black',10002),
+(400048, 'Xiaomi Mi Band 5', 'A', 2490, 35, 'XMSH11HM', 'Black',10003),
+(400049, 'Oppo Enco Q1', 'A', 4490, 25, 'EHC00', 'Black',10004),
+(400050, 'Huawei FreeBuds Lite', 'A', 1990, 30, '55021135', 'Black',10005);
+
+
+
+-- accessory--cover
+INSERT INTO ACCESSORIES VALUES 
+(200001, 100001, 'CV'), -- Samsung S21 Clear Case
+(200002, 100001, 'CV'), -- Samsung S21 Leather Case
+(200003, 100001, 'CV'), -- Samsung S21 Silicone Case
+(200004, 100002, 'CV'), -- iPhone 12 Clear Case
+(200005, 100002, 'CV'), -- iPhone 12 Leather Case
+(200006, 100002, 'CV'), -- iPhone 12 Silicone Case
+(200007, 100003, 'CV'), -- Xiaomi Mi 11 Clear Case
+(200008, 100003, 'CV'), -- Xiaomi Mi 11 Leather Case
+(200009, 100003, 'CV'), -- Xiaomi Mi 11 Silicone Case
+(200010, 100004, 'CV'), -- Oppo Find X3 Clear Case
+(200011, 100004, 'CV'), -- Oppo Find X3 Leather Case
+(200012, 100004, 'CV'), -- Oppo Find X3 Silicone Case
+(200013, 100005, 'CV'), -- Huawei P40 Clear Case
+(200014, 100005, 'CV'), -- Huawei P40 Leather Case
+(200015, 100005, 'CV'), -- Huawei P40 Silicone Case
+(200016, 100006, 'CV'),	-- Sony Xperia 5 II Clear Case
+(200017, 100006, 'CV'), -- Sony Xperia 5 II Leather Case
+(200018, 100006, 'CV'), -- Sony Xperia 5 II Silicone Case
+(200019, 100007, 'CV'), -- LG Velvet Clear Case
+(200020, 100007, 'CV'), -- LG Velvet Leather Case
+(200021, 100007, 'CV'), -- LG Velvet Silicone Case
+(200022, 100008, 'CV'), -- Nokia 8.3 Clear Case
+(200023, 100008, 'CV'), -- Nokia 8.3 Leather Case
+(200024, 100008, 'CV'), -- Nokia 8.3 Silicone Case
+(200025, 100009, 'CV'), -- Google Pixel 5 Clear Case
+(200026, 100009, 'CV'), -- Google Pixel 5 Leather Case
+(200027, 100009, 'CV'), -- Google Pixel 5 Silicone Case
+(200028, 100010, 'CV'), -- OnePlus 9 Clear Case
+(200029, 100010, 'CV'), -- OnePlus 9 Leather Case
+(200030, 100010, 'CV'), -- OnePlus 9 Silicone Case
+(200031, 100011, 'CV'), -- Realme GT Clear Case
+(200032, 100011, 'CV'), -- Realme GT Leather Case
+(200033, 100011, 'CV'), -- Realme GT Silicone Case
+(200034, 100012, 'CV'), -- Vivo V21 Clear Case
+(200035, 100012, 'CV'), -- Vivo V21 Leather Case
+(200036, 100012, 'CV'), -- Vivo V21 Silicone Case
+(200037, 100013, 'CV'), -- Asus ROG Phone 5 Clear Case
+(200038, 100013, 'CV'), -- Asus ROG Phone 5 Leather Case
+(200039, 100013, 'CV'), -- Asus ROG Phone 5 Silicone Case
+(200040, 100014, 'CV'), -- Lenovo Legion Phone Clear Case
+(200041, 100014, 'CV'), -- Lenovo Legion Phone Leather Case
+(200042, 100014, 'CV'), -- Lenovo Legion Phone Silicone Case
+(200043, 100015, 'CV'), -- HTC U20 Clear Case
+(200044, 100015, 'CV'), -- HTC U20 Leather Case
+(200045, 100015, 'CV'), -- HTC U20 Silicone Case
+(200046, 100016, 'CV'), -- Samsung A52 Clear Case
+(200047, 100016, 'CV'), -- Samsung A52 Leather Case
+(200048, 100016, 'CV'), -- Samsung A52 Silicone Case
+(200049, 100017, 'CV'), -- iPhone SE Clear Case
+(200050, 100017, 'CV'), -- iPhone SE Leather Case
+(200051, 100017, 'CV'), -- iPhone SE Silicone Case
+(200052, 100018, 'CV'), -- Xiaomi Redmi Note 10 Clear Case
+(200053, 100018, 'CV'), -- Xiaomi Redmi Note 10 Leather Case
+(200054, 100018, 'CV'), -- Xiaomi Redmi Note 10 Silicone Case
+(200055, 100019, 'CV'), -- Oppo Reno5 Clear Case
+(200056, 100019, 'CV'), -- Oppo Reno5 Leather Case
+(200057, 100019, 'CV'), -- Oppo Reno5 Silicone Case
+(200058, 100020, 'CV'), -- Huawei Nova 8 Clear Case
+(200059, 100020, 'CV'), -- Huawei Nova 8 Leather Case
+(200060, 100020, 'CV'), -- Huawei Nova 8 Silicone Case
+(200061, 100021, 'CV'), -- Sony Xperia 10 III Clear Case
+(200062, 100021, 'CV'), -- Sony Xperia 10 III Leather Case
+(200063, 100021, 'CV'), -- Sony Xperia 10 III Silicone Case
+(200064, 100022, 'CV'), -- LG Wing Clear Case
+(200065, 100022, 'CV'), -- LG Wing Leather Case
+(200066, 100022, 'CV'), -- LG Wing Silicone Case
+(200067, 100023, 'CV'), -- Nokia G50 Clear Case
+(200068, 100023, 'CV'), -- Nokia G50 Leather Case
+(200069, 100023, 'CV'), -- Nokia G50 Silicone Case
+(200070, 100024, 'CV'), -- Google Pixel 4a Clear Case
+(200071, 100024, 'CV'), -- Google Pixel 4a Leather Case
+(200072, 100024, 'CV'), -- Google Pixel 4a Silicone Case
+(200073, 100025, 'CV'), -- OnePlus Nord Clear Case
+(200074, 100025, 'CV'), -- OnePlus Nord Leather Case
+(200075, 100025, 'CV'), -- OnePlus Nord Silicone Case
+(200076, 100026, 'CV'), -- Realme 7 Clear Case
+(200077, 100026, 'CV'), -- Realme 7 Leather Case
+(200078, 100026, 'CV'), -- Realme 7 Silicone Case
+(200079, 100027, 'CV'), -- Vivo Y20 Clear Case
+(200080, 100027, 'CV'), -- Vivo Y20 Leather Case
+(200081, 100027, 'CV'), -- Vivo Y20 Silicone Case
+(200082, 100028, 'CV'), -- Asus Zenfone 8 Clear Case
+(200083, 100028, 'CV'), -- Asus Zenfone 8 Leather Case
+(200084, 100028, 'CV'), -- Asus Zenfone 8 Silicone Case
+(200085, 100029, 'CV'), -- Lenovo K12 Clear Case
+(200086, 100029, 'CV'), -- Lenovo K12 Leather Case
+(200087, 100029, 'CV'), -- Lenovo K12 Silicone Case
+(200088, 100030, 'CV'), -- HTC Desire 21 Clear Case
+(200089, 100030, 'CV'), -- HTC Desire 21 Leather Case
+(200090, 100030, 'CV'), -- HTC Desire 21 Silicone Case
+(200091, 100031, 'CV'), -- Samsung A72 Clear Case
+(200092, 100031, 'CV'), -- Samsung A72 Leather Case
+(200093, 100031, 'CV'), -- Samsung A72 Silicone Case
+(200094, 100032, 'CV'), -- iPhone 11 Clear Case
+(200095, 100032, 'CV'), -- iPhone 11 Leather Case
+(200096, 100032, 'CV'), -- iPhone 11 Silicone Case
+(200097, 100033, 'CV'), -- Xiaomi Poco X3 Clear Case
+(200098, 100033, 'CV'), -- Xiaomi Poco X3 Leather Case
+(200099, 100033, 'CV'), -- Xiaomi Poco X3 Silicone Case
+(200100, 100034, 'CV'), -- Oppo A54 Clear Case
+(200101, 100034, 'CV'), -- Oppo A54 Leather Case
+(200102, 100034, 'CV'), -- Oppo A54 Silicone Case
+(200103, 100035, 'CV'), -- Huawei Y6 Clear Case
+(200104, 100035, 'CV'), -- Huawei Y6 Leather Case
+(200105, 100035, 'CV'), -- Huawei Y6 Silicone Case
+(200106, 100036, 'CV'), -- Sony Xperia L4 Clear Case
+(200107, 100036, 'CV'), -- Sony Xperia L4 Leather Case
+(200108, 100036, 'CV'), -- Sony Xperia L4 Silicone Case
+(200109, 100037, 'CV'), -- LG G8 ThinQ Clear Case
+(200110, 100037, 'CV'), -- LG G8 ThinQ Leather Case
+(200111, 100037, 'CV'), -- LG G8 ThinQ Silicone Case
+(200112, 100038, 'CV'), -- Nokia 5.4 Clear Case
+(200113, 100038, 'CV'), -- Nokia 5.4 Leather Case
+(200114, 100038, 'CV'), -- Nokia 5.4 Silicone Case
+(200115, 100039, 'CV'), -- Google Pixel 4 Clear Case
+(200116, 100039, 'CV'), -- Google Pixel 4 Leather Case
+(200117, 100039, 'CV'), -- Google Pixel 4 Silicone Case
+(200118, 100040, 'CV'), -- OnePlus 8T Clear Case
+(200119, 100040, 'CV'), -- OnePlus 8T Leather Case
+(200120, 100040, 'CV'), -- OnePlus 8T Silicone Case
+(200121, 100041, 'CV'), -- Realme 8 Clear Case
+(200122, 100041, 'CV'), -- Realme 8 Leather Case
+(200123, 100041, 'CV'), -- Realme 8 Silicone Case
+(200124, 100042, 'CV'), -- Vivo V20 SE Clear Case
+(200125, 100042, 'CV'), -- Vivo V20 SE Leather Case
+(200126, 100042, 'CV'), -- Vivo V20 SE Silicone Case
+(200127, 100043, 'CV'), -- Asus ROG Phone II Clear Case
+(200128, 100043, 'CV'), -- Asus ROG Phone II Leather Case
+(200129, 100043, 'CV'), -- Asus ROG Phone II Silicone Case
+(200130, 100044, 'CV'), -- Lenovo Z6 Pro Clear Case
+(200131, 100044, 'CV'), -- Lenovo Z6 Pro Leather Case
+(200132, 100044, 'CV'), -- Lenovo Z6 Pro Silicone Case
+(200133, 100045, 'CV'), -- HTC U12 Life Clear Case
+(200134, 100045, 'CV'), -- HTC U12 Life Leather Case
+(200135, 100045, 'CV'), -- HTC U12 Life Silicone Case
+(200136, 100046, 'CV'), -- Samsung Note 20 Clear Case
+(200137, 100046, 'CV'), -- Samsung Note 20 Leather Case
+(200138, 100046, 'CV'), -- Samsung Note 20 Silicone Case
+(200139, 100047, 'CV'), -- iPhone 13 Clear Case
+(200140, 100047, 'CV'), -- iPhone 13 Leather Case
+(200141, 100047, 'CV'), -- iPhone 13 Silicone Case
+(200142, 100048, 'CV'), -- Xiaomi Mi Mix 4 Clear Case
+(200143, 100048, 'CV'), -- Xiaomi Mi Mix 4 Leather Case
+(200144, 100048, 'CV'), -- Xiaomi Mi Mix 4 Silicone Case
+(200145, 100049, 'CV'), -- Oppo Find N Clear Case
+(200146, 100049, 'CV'), -- Oppo Find N Leather Case
+(200147, 100049, 'CV'), -- Oppo Find N Silicone Case
+(200148, 100050, 'CV'), -- Huawei Mate 40 Pro Clear Case
+(200149, 100050, 'CV'), -- Huawei Mate 40 Pro Leather Case
+(200150, 100050, 'CV'); -- Huawei Mate 40 Pro Silicone Case
+
+-- Cover ID and Texture
+INSERT INTO COVERS VALUES
+(200001, 'Clear'),
+(200002, 'Leather'),
+(200003, 'Silicone'),
+(200004, 'Clear'),
+(200005, 'Leather'),
+(200006, 'Silicone'),
+(200007, 'Clear'),
+(200008, 'Leather'),
+(200009, 'Silicone'),
+(200010, 'Clear'),
+(200011, 'Leather'),
+(200012, 'Silicone'),
+(200013, 'Clear'),
+(200014, 'Leather'),
+(200015, 'Silicone'),
+(200016, 'Clear'),
+(200017, 'Leather'),
+(200018, 'Silicone'),
+(200019, 'Clear'),
+(200020, 'Leather'),
+(200021, 'Silicone'),
+(200022, 'Clear'),
+(200023, 'Leather'),
+(200024, 'Silicone'),
+(200025, 'Clear'),
+(200026, 'Leather'),
+(200027, 'Silicone'),
+(200028, 'Clear'),
+(200029, 'Leather'),
+(200030, 'Silicone'),
+(200031, 'Clear'),
+(200032, 'Leather'),
+(200033, 'Silicone'),
+(200034, 'Clear'),
+(200035, 'Leather'),
+(200036, 'Silicone'),
+(200037, 'Clear'),
+(200038, 'Leather'),
+(200039, 'Silicone'),
+(200040, 'Clear'),
+(200041, 'Leather'),
+(200042, 'Silicone'),
+(200043, 'Clear'),
+(200044, 'Leather'),
+(200045, 'Silicone'),
+(200046, 'Clear'),
+(200047, 'Leather'),
+(200048, 'Silicone'),
+(200049, 'Clear'),
+(200050, 'Leather'),
+(200051, 'Silicone'),
+(200052, 'Clear'),
+(200053, 'Leather'),
+(200054, 'Silicone'),
+(200055, 'Clear'),
+(200056, 'Leather'),
+(200057, 'Silicone'),
+(200058, 'Clear'),
+(200059, 'Leather'),
+(200060, 'Silicone'),
+(200061, 'Clear'),
+(200062, 'Leather'),
+(200063, 'Silicone'),
+(200064, 'Clear'),
+(200065, 'Leather'),
+(200066, 'Silicone'),
+(200067, 'Clear'),
+(200068, 'Leather'),
+(200069, 'Silicone'),
+(200070, 'Clear'),
+(200071, 'Leather'),
+(200072, 'Silicone'),
+(200073, 'Clear'),
+(200074, 'Leather'),
+(200075, 'Silicone'),
+(200076, 'Clear'),
+(200077, 'Leather'),
+(200078, 'Silicone'),
+(200079, 'Clear'),
+(200080, 'Leather'),
+(200081, 'Silicone'),
+(200082, 'Clear'),
+(200083, 'Leather'),
+(200084, 'Silicone'),
+(200085, 'Clear'),
+(200086, 'Leather'),
+(200087, 'Silicone'),
+(200088, 'Clear'),
+(200089, 'Leather'),
+(200090, 'Silicone'),
+(200091, 'Clear'),
+(200092, 'Leather'),
+(200093, 'Silicone'),
+(200094, 'Clear'),
+(200095, 'Leather'),
+(200096, 'Silicone'),
+(200097, 'Clear'),
+(200098, 'Leather'),
+(200099, 'Silicone'),
+(200100, 'Clear'),
+(200101, 'Leather'),
+(200102, 'Silicone'),
+(200103, 'Clear'),
+(200104, 'Leather'),
+(200105, 'Silicone'),
+(200106, 'Clear'),
+(200107, 'Leather'),
+(200108, 'Silicone'),
+(200109, 'Clear'),
+(200110, 'Leather'),
+(200111, 'Silicone'),
+(200112, 'Clear'),
+(200113, 'Leather'),
+(200114, 'Silicone'),
+(200115, 'Clear'),
+(200116, 'Leather'),
+(200117, 'Silicone'),
+(200118, 'Clear'),
+(200119, 'Leather'),
+(200120, 'Silicone'),
+(200121, 'Clear'),
+(200122, 'Leather'),
+(200123, 'Silicone'),
+(200124, 'Clear'),
+(200125, 'Leather'),
+(200126, 'Silicone'),
+(200127, 'Clear'),
+(200128, 'Leather'),
+(200129, 'Silicone'),
+(200130, 'Clear'),
+(200131, 'Leather'),
+(200132, 'Silicone'),
+(200133, 'Clear'),
+(200134, 'Leather'),
+(200135, 'Silicone'),
+(200136, 'Clear'),
+(200137, 'Leather'),
+(200138, 'Silicone'),
+(200139, 'Clear'),
+(200140, 'Leather'),
+(200141, 'Silicone'),
+(200142, 'Clear'),
+(200143, 'Leather'),
+(200144, 'Silicone'),
+(200145, 'Clear'),
+(200146, 'Leather'),
+(200147, 'Silicone'),
+(200148, 'Clear'),
+(200149, 'Leather'),
+(200150, 'Silicone');
+
+
+
+
+-- accessory--charger
+INSERT INTO ACCESSORIES VALUES
+(300001, 100001, 'CH'), -- Samsung Fast Charger -> Galaxy S21
+(300002, 100002, 'CH'), -- Apple 20W USB-C Power Adapter -> iPhone 12
+(300003, 100003, 'CH'), -- Xiaomi 33W Fast Charger -> Mi 11
+(300004, 100004, 'CH'), -- Oppo 50W SuperVOOC Charger -> Oppo Find X3
+(300005, 100005, 'CH'), -- Huawei 40W SuperCharge -> Huawei P40
+(300006, 100006, 'CH'), -- Sony 18W Fast Charger -> Sony Xperia 5 II
+(300007, 100007, 'CH'), -- LG Fast Charger -> LG Velvet
+(300008, 100008, 'CH'), -- Nokia 18W Fast Charger -> Nokia 8.3
+(300009, 100009, 'CH'), -- Google 18W USB-C Power Adapter -> Google Pixel 5
+(300010, 100010, 'CH'), -- OnePlus Warp Charge 30 -> OnePlus 9
+(300011, 100011, 'CH'), -- Realme 65W SuperDart Charger -> Realme GT
+(300012, 100012, 'CH'), -- Vivo 44W FlashCharge -> Vivo V21
+(300013, 100013, 'CH'), -- Asus 30W HyperCharge -> Asus ROG Phone 5
+(300014, 100014, 'CH'), -- Lenovo 27W Turbo Charger -> Lenovo Legion Phone Duel
+(300015, 100015, 'CH'), -- HTC Quick Charge 3.0 Charger -> HTC U20
+(300016, 100016, 'CH'), -- Samsung 45W Super Fast Charger -> Samsung A52
+(300017, 100017, 'CH'), -- Apple 30W USB-C Power Adapter -> iPhone SE
+(300018, 100018, 'CH'), -- Xiaomi 67W Turbo Charger -> Xiaomi Redmi Note 10
+(300019, 100019, 'CH'), -- Oppo 65W SuperVOOC 2.0 Charger -> Oppo Reno5
+(300020, 100020, 'CH'), -- Huawei 66W SuperCharge -> Huawei Nova 8
+(300021, 100021, 'CH'), -- Sony 30W Quick Charger -> Sony Xperia 10 III
+(300022, 100022, 'CH'), -- LG 25W Fast Charger -> LG Wing
+(300023, 100023, 'CH'), -- Nokia 30W Fast Charger -> Nokia G50
+(300024, 100024, 'CH'), -- Google 30W USB-C Power Adapter -> Google Pixel 4a
+(300025, 100025, 'CH'), -- OnePlus Warp Charge 65 -> OnePlus Nord
+(300026, 100026, 'CH'), -- Realme 50W SuperDart Charger -> Realme 7
+(300027, 100027, 'CH'), -- Vivo 66W FlashCharge -> Vivo Y20
+(300028, 100028, 'CH'), -- Asus 65W HyperCharge -> Asus Zenfone 8
+(300029, 100029, 'CH'), -- Lenovo 50W Turbo Charger -> Lenovo K12
+(300030, 100030, 'CH'), -- HTC Quick Charge 4.0 Charger -> HTC Desire 21
+(300031, 100031, 'CH'), -- Samsung 25W Super Fast Charger -> Samsung A72
+(300032, 100032, 'CH'), -- Apple 18W USB-C Power Adapter -> iPhone 11
+(300033, 100033, 'CH'), -- Xiaomi 50W Fast Charger -> Xiaomi Poco X3
+(300034, 100034, 'CH'), -- Oppo 18W Fast Charger -> Oppo A54
+(300035, 100035, 'CH'), -- Huawei 22.5W Fast Charger -> Huawei Y6
+(300036, 100036, 'CH'), -- Sony 18W Fast Charger -> Sony Xperia L4
+(300037, 100037, 'CH'), -- LG 18W Quick Charger -> LG G8 ThinQ
+(300038, 100038, 'CH'), -- Nokia 22W Quick Charger -> Nokia 5.4
+(300039, 100039, 'CH'), -- Google 22W USB-C Power Adapter -> Google Pixel 4
+(300040, 100040, 'CH'), -- OnePlus Warp Charge 30 -> OnePlus 8T
+(300041, 100041, 'CH'), -- Realme 65W SuperDart Charger -> Realme 7
+(300042, 100042, 'CH'), -- Vivo 44W FlashCharge -> Vivo V20 SE
+(300043, 100043, 'CH'), -- Asus 30W HyperCharge -> Asus ROG Phone II
+(300044, 100044, 'CH'), -- Lenovo 30W Turbo Charger -> Lenovo Z6 Pro
+(300045, 100045, 'CH'), -- HTC Quick Charge 3.0 Charger -> HTC U12 Life
+(300046, 100046, 'CH'), -- Samsung 45W Super Fast Charger -> Samsung Note 20
+(300047, 100047, 'CH'), -- Apple 30W USB-C Power Adapter -> iPhone 13
+(300048, 100048, 'CH'), -- Xiaomi 67W Turbo Charger -> Xiaomi Mi Mix 4
+(300049, 100049, 'CH'), -- Oppo 65W SuperVOOC 2.0 Charger -> Oppo Find N
+(300050, 100050, 'CH'); -- Huawei 66W SuperCharge -> Huawei Mate 40 Pro
+
+-- charger-watt
+-- Charger ID to Wattage Mapping
+INSERT INTO CHARGERS VALUES
+(300001, 25),  -- Samsung Fast Charger
+(300002, 20),  -- Apple 20W USB-C Power Adapter
+(300003, 33),  -- Xiaomi 33W Fast Charger
+(300004, 50),  -- Oppo 50W SuperVOOC Charger
+(300005, 40),  -- Huawei 40W SuperCharge
+(300006, 18),  -- Sony 18W Fast Charger
+(300007, 18),  -- LG Fast Charger
+(300008, 18),  -- Nokia 18W Fast Charger
+(300009, 18),  -- Google 18W USB-C Power Adapter
+(300010, 30),  -- OnePlus Warp Charge 30
+(300011, 65),  -- Realme 65W SuperDart Charger
+(300012, 44),  -- Vivo 44W FlashCharge
+(300013, 30),  -- Asus 30W HyperCharge
+(300014, 27),  -- Lenovo 27W Turbo Charger
+(300015, 18),  -- HTC Quick Charge 3.0 Charger
+(300016, 45),  -- Samsung 45W Super Fast Charger
+(300017, 30),  -- Apple 30W USB-C Power Adapter
+(300018, 67),  -- Xiaomi 67W Turbo Charger
+(300019, 65),  -- Oppo 65W SuperVOOC 2.0 Charger
+(300020, 66),  -- Huawei 66W SuperCharge
+(300021, 30),  -- Sony 30W Quick Charger
+(300022, 25),  -- LG 25W Fast Charger
+(300023, 30),  -- Nokia 30W Fast Charger
+(300024, 30),  -- Google 30W USB-C Power Adapter
+(300025, 65),  -- OnePlus Warp Charge 65
+(300026, 50),  -- Realme 50W SuperDart Charger
+(300027, 66),  -- Vivo 66W FlashCharge
+(300028, 65),  -- Asus 65W HyperCharge
+(300029, 50),  -- Lenovo 50W Turbo Charger
+(300030, 18),  -- HTC Quick Charge 4.0 Charger
+(300031, 25),  -- Samsung 25W Super Fast Charger
+(300032, 18),  -- Apple 18W USB-C Power Adapter
+(300033, 50),  -- Xiaomi 50W Fast Charger
+(300034, 18),  -- Oppo 18W Fast Charger
+(300035, 22.5), -- Huawei 22.5W Fast Charger
+(300036, 18),  -- Sony 18W Fast Charger
+(300037, 18),  -- LG 18W Quick Charger
+(300038, 22),  -- Nokia 22W Quick Charger
+(300039, 22),  -- Google 22W USB-C Power Adapter
+(300040, 30),  -- OnePlus Warp Charge 30
+(300041, 65),  -- Realme 65W SuperDart Charger
+(300042, 44),  -- Vivo 44W FlashCharge
+(300043, 30),  -- Asus 30W HyperCharge
+(300044, 30),  -- Lenovo 30W Turbo Charger
+(300045, 18),  -- HTC Quick Charge 3.0 Charger
+(300046, 45),  -- Samsung 45W Super Fast Charger
+(300047, 30),  -- Apple 30W USB-C Power Adapter
+(300048, 67),  -- Xiaomi 67W Turbo Charger
+(300049, 65),  -- Oppo 65W SuperVOOC 2.0 Charger
+(300050, 66);  -- Huawei 66W SuperCharge
+
+-- accessory headset
+INSERT INTO ACCESSORIES VALUES
+(400001, 100001, 'H'),
+(400002, 100002, 'H'),
+(400003, 100003, 'H'),
+(400004, 100004, 'H'),
+(400005, 100005, 'H'),
+(400006, 100006, 'H'),
+(400007, 100007, 'H'),
+(400008, 100008, 'H'),
+(400009, 100009, 'H'),
+(400010, 100010, 'H'),
+(400011, 100011, 'H'),
+(400012, 100012, 'H'),
+(400013, 100013, 'H'),
+(400014, 100014, 'H'),
+(400015, 100015, 'H'),
+(400016, 100016, 'H'),
+(400017, 100017, 'H'),
+(400018, 100018, 'H'),
+(400019, 100019, 'H'),
+(400020, 100020, 'H'),
+(400021, 100021, 'H'),
+(400022, 100022, 'H'),
+(400023, 100023, 'H'),
+(400024, 100024, 'H'),
+(400025, 100025, 'H'),
+(400026, 100026, 'H'),
+(400027, 100027, 'H'),
+(400028, 100028, 'H'),
+(400029, 100029, 'H'),
+(400030, 100030, 'H'),
+(400031, 100031, 'H'),
+(400032, 100032, 'H'),
+(400033, 100033, 'H'),
+(400034, 100034, 'H'),
+(400035, 100035, 'H'),
+(400036, 100036, 'H'),
+(400037, 100037, 'H'),
+(400038, 100038, 'H'),
+(400039, 100039, 'H'),
+(400040, 100040, 'H'),
+(400041, 100041, 'H'),
+(400042, 100042, 'H'),
+(400043, 100043, 'H'),
+(400044, 100044, 'H'),
+(400045, 100045, 'H'),
+(400046, 100046, 'H'),
+(400047, 100047, 'H'),
+(400048, 100048, 'H'),
+(400049, 100049, 'H'),
+(400050, 100050, 'H');
+
+
+-- headphone--Type
+INSERT INTO HEADSETS VALUES
+(400001, 'Bud', 95),
+(400002, 'Bud', 92),
+(400003, 'Bud', 90),
+(400004, 'Bud', 93),
+(400005, 'Bud', 94),
+(400006, 'Headphone', 98),
+(400007, 'Bud', 91),
+(400008, 'Bud', 89),
+(400009, 'Headphone', 96),
+(400010, 'Bud', 87),
+(400011, 'Bud', 92),
+(400012, 'Headphone', 99),
+(400013, 'Bud', 90),
+(400014, 'Bud', 94),
+(400015, 'Headphone', 95),
+(400016, 'Bud', 88),
+(400017, 'Bud', 91),
+(400018, 'Headphone', 97),
+(400019, 'Bud', 89),
+(400020, 'Bud', 93),
+(400021, 'Bud', 90),
+(400022, 'Headphone', 98),
+(400023, 'Bud', 92),
+(400024, 'Bud', 91),
+(400025, 'Headphone', 96),
+(400026, 'Bud', 88),
+(400027, 'Bud', 90),
+(400028, 'Headphone', 97),
+(400029, 'Bud', 93),
+(400030, 'Bud', 89),
+(400031, 'Bud', 92),
+(400032, 'Headphone', 99),
+(400033, 'Bud', 90),
+(400034, 'Bud', 94),
+(400035, 'Headphone', 95),
+(400036, 'Bud', 87),
+(400037, 'Bud', 91),
+(400038, 'Headphone', 96),
+(400039, 'Bud', 89),
+(400040, 'Bud', 93),
+(400041, 'Bud', 90),
+(400042, 'Headphone', 98),
+(400043, 'Bud', 92),
+(400044, 'Bud', 91),
+(400045, 'Headphone', 96),
+(400046, 'Bud', 88),
+(400047, 'Bud', 90),
+(400048, 'Headphone', 97),
+(400049, 'Bud', 93),
+(400050, 'Bud', 89);
+
+
+INSERT INTO PRODUCTS (productId, productName, productType, price, quantity, model, color, supplierId) VALUES
+(100051, 'Samsung Galaxy S23', 'P', 29900.00, 20, 'SM-G991B', 'Phantom Black', 10001),
+(100052, 'Apple iPhone 14', 'P', 38900.00, 15, 'A2649', 'Midnight', 10002),
+(100053, 'Huawei P50 Pro', 'P', 28900.00, 10, 'ANA-AN00', 'Silver', 10003),
+(100054, 'Xiaomi 12 Pro', 'P', 24900.00, 18, '2102212G', 'Black', 10004),
+(100055, 'Oppo Find X5', 'P', 25900.00, 25, 'CPH2185', 'White', 10005),
+(100056, 'Vivo X80 Pro', 'P', 31900.00, 30, 'V2145A', 'Cosmic Black', 10006),
+(100057, 'OnePlus 10 Pro', 'P', 27900.00, 22, 'NE2213', 'Emerald Forest', 10007),
+(100058, 'Sony Xperia 1 IV', 'P', 35900.00, 12, 'XQ-CT44', 'Black', 10008),
+(100059, 'Nokia G50', 'P', 12900.00, 40, 'TA-1340', 'Midnight Sun', 10009),
+(100060, 'Motorola Edge 30', 'P', 17900.00, 35, 'XT2201-1', 'Meteor Gray', 10010),
+(100061, 'LG Velvet', 'P', 21900.00, 28, 'LM-G900EMW', 'Illusion Sunset', 10011),
+(100062, 'Google Pixel 6', 'P', 24900.00, 24, 'GLU0D', 'Sorta Seafoam', 10012),
+(100063, 'Realme GT 2 Pro', 'P', 22900.00, 20, 'RMX3301', 'Steel Black', 10013),
+(100064, 'ZTE Axon 20', 'P', 15900.00, 18, 'A2021', 'Black', 10014),
+(100065, 'Alcatel 3X (2020)', 'P', 8900.00, 50, '5053D', 'Black', 10015),
+(100066, 'BlackBerry Key2', 'P', 23900.00, 15, 'BBF100-1', 'Slate', 10016),
+(100067, 'Honor 50', 'P', 15900.00, 30, 'TNA-AN00', 'Crystal Green', 10017),
+(100068, 'Tecno Pova 5', 'P', 9900.00, 45, 'TECNO-Pova5', 'Mystic Blue', 10018),
+(100069, 'Infinix Zero Ultra', 'P', 13900.00, 20, 'X6812', 'Genesis Noir', 10019),
+(100070, 'TCL 20 Pro 5G', 'P', 15900.00, 12, 'TCL-20', 'Marine Blue', 10020),
+(100071, 'Meizu 18 Pro', 'P', 27900.00, 10, 'M1812', 'Sky Blue', 10021),
+(100072, 'Lava Agni 2', 'P', 13900.00, 15, 'LAVA-AGNI2', 'Charcoal Black', 10022),
+(100073, 'Micromax IN Note 2', 'P', 11900.00, 18, 'IN-NOTE2', 'Black', 10023),
+(100074, 'Gionee G13 Pro', 'P', 8990.00, 55, 'GIONEE-G13', 'Blue', 10024),
+(100075, 'Toshiba Excite Pro', 'P', 17900.00, 12, 'TOSHIBA-EXP', 'Silver', 10025),
+(100076, 'Panasonic Eluga I7', 'P', 7990.00, 50, 'ELUGA-I7', 'Black', 10026),
+(100077, 'HTC Desire 21 Pro', 'P', 12900.00, 30, 'HTC-D21P', 'Blue', 10027),
+(100078, 'Fujitsu Arrows 5G', 'P', 19900.00, 20, 'FJ-ARROWS5G', 'Black', 10028),
+(100079, 'Essential Phone', 'P', 22900.00, 22, 'PH-1', 'Black', 10029),
+(100080, 'Systena S1', 'P', 15900.00, 25, 'SYSTENA-S1', 'Gray', 10030),
+(100081, 'Blu G50', 'P', 6990.00, 60, 'G50', 'Gray', 10031),
+(100082, 'Jio Phone Next', 'P', 3990.00, 100, 'JIO-PHONE', 'Blue', 10032),
+(100083, 'Karbonn K9', 'P', 3990.00, 80, 'K9', 'Gold', 10033),
+(100084, 'Oppo A54', 'P', 8990.00, 70, 'CPH2219', 'Black', 10034),
+(100085, 'Honor 10X', 'P', 12900.00, 35, 'HONOR-10X', 'Gold', 10035),
+(100086, 'Nubia Z30 Pro', 'P', 25900.00, 20, 'NUBIA-Z30P', 'Black', 10036),
+(100087, 'Xgody X6', 'P', 3990.00, 55, 'XGODY-X6', 'Blue', 10037),
+(100088, 'Lava Z2 Max', 'P', 6990.00, 65, 'LZ2MAX', 'Black', 10038),
+(100089, 'Honor Magic 4', 'P', 28900.00, 18, 'HONOR-M4', 'Black', 10039),
+(100090, 'Doro 7030', 'P', 10900.00, 50, 'DORO-7030', 'White', 10040),
+(100091, 'Sony Xperia 5 IV', 'P', 27900.00, 20, 'XQ-CT54', 'Black', 10041),
+(100092, 'Acer Liquid Z6', 'P', 13900.00, 15, 'LIQUID-Z6', 'Gray', 10042),
+(100093, 'Sharp Aquos R6', 'P', 38900.00, 10, 'AQUOS-R6', 'Black', 10043),
+(100094, 'Gigabyte GSmart', 'P', 12900.00, 30, 'GSMART', 'Blue', 10044),
+(100095, 'BenQ B5', 'P', 6990.00, 45, 'BENQ-B5', 'Gray', 10045),
+(100096, 'Vizio Mobile TV', 'P', 12900.00, 25, 'VIZIO-TV', 'Black', 10046),
+(100097, 'Razer Phone 2', 'P', 19900.00, 15, 'RAZER-P2', 'Black', 10047),
+(100098, 'Alcatel 1SE', 'P', 4990.00, 60, 'ALCATEL-1SE', 'Blue', 10048),
+(100099, 'Toshiba 5G Phone', 'P', 16900.00, 12, 'TOSHIBA-5G', 'Black', 10049),
+(100100, 'Kyocera DuraForce', 'P', 14900.00, 10, 'DURAFORCE', 'Black', 10050),
+(100101, 'Samsung Galaxy Note 20', 'P', 33900.00, 20, 'SM-N981B', 'Mystic Bronze', 10001),
+(100102, 'Apple iPhone 13 Pro', 'P', 41900.00, 15, 'A2638', 'Gold', 10002),
+(100103, 'Huawei Mate 40 Pro', 'P', 39900.00, 10, 'NOH-AN00', 'Silver', 10003),
+(100104, 'Xiaomi Redmi Note 11', 'P', 11900.00, 18, '2201116SG', 'Graphite Gray', 10004),
+(100105, 'Oppo Reno 8', 'P', 21900.00, 25, 'CPH2357', 'Shimmering Gold', 10005),
+(100106, 'Vivo V25 Pro', 'P', 24900.00, 30, 'V2151', 'Sunset Melody', 10006),
+(100107, 'OnePlus Nord 2', 'P', 15900.00, 22, 'DN2101', 'Green Wood', 10007),
+(100108, 'Sony Xperia 10 III', 'P', 16900.00, 12, 'XQ-BC72', 'Black', 10008),
+(100109, 'Nokia X20', 'P', 13900.00, 40, 'TA-1361', 'Nordic Blue', 10009),
+(100110, 'Motorola Moto G60', 'P', 12900.00, 35, 'XT2135-1', 'Dynamic Gray', 10010),
+(100111, 'LG Wing', 'P', 23900.00, 28, 'LM-F100N', 'Illusion Sky', 10011),
+(100112, 'Google Pixel 5a', 'P', 19900.00, 24, 'GLU1D', 'Mostly Black', 10012),
+(100113, 'Realme 9 Pro+', 'P', 15900.00, 20, 'RMX3393', 'Sunset Blue', 10013),
+(100114, 'ZTE Axon 30 Ultra', 'P', 32900.00, 20, 'A2021', 'Black', 10014),
+(100115, 'Alcatel 3L (2021)', 'P', 6990.00, 50, '5052D', 'Dark Purple', 10015),
+(100116, 'BlackBerry KEYone', 'P', 23900.00, 15, 'BBE100-1', 'Black', 10016),
+(100117, 'Honor 50 Lite', 'P', 13900.00, 30, 'TNA-AN00', 'Sakura Pink', 10017),
+(100118, 'Tecno Camon 18', 'P', 9990.00, 45, 'TECNO-CAMON18', 'Dusk Gray', 10018),
+(100119, 'Infinix Note 11', 'P', 10900.00, 20, 'X6812', 'Horizon Blue', 10019),
+(100120, 'TCL 10 Pro', 'P', 13900.00, 12, 'TCL-10P', 'Forest Mist', 10020),
+(100121, 'Meizu 18', 'P', 28900.00, 10, 'M1812', 'Black', 10021),
+(100122, 'Lava Agni 1', 'P', 11900.00, 15, 'LAVA-AGNI1', 'Black', 10022),
+(100123, 'Micromax IN 1', 'P', 9990.00, 18, 'IN-1', 'Black', 10023),
+(100124, 'Gionee M12', 'P', 6990.00, 55, 'M12', 'Blue', 10024),
+(100125, 'Oppo A15s', 'P', 6990.00, 50, 'CPH2179', 'Dynamic Black', 10025),
+(100126, 'Honor X20', 'P', 18900.00, 20, 'HONOR-X20', 'Midnight Black', 10026),
+(100127, 'Nubia Red Magic 6', 'P', 29900.00, 12, 'NX669J', 'Black', 10027),
+(100128, 'Xgody X20', 'P', 4990.00, 60, 'XGODY-X20', 'Red', 10028),
+(100129, 'Lava Z2', 'P', 4990.00, 65, 'LZ2', 'Blue', 10029),
+(100130, 'Honor 9X', 'P', 15900.00, 18, 'HONOR-9X', 'Phantom Purple', 10030),
+(100131, 'Doro 8035', 'P', 10900.00, 50, 'DORO-8035', 'White', 10031),
+(100132, 'Sony Xperia 1 III', 'P', 35900.00, 20, 'XQ-BC72', 'Black', 10032),
+(100133, 'Acer Liquid Z5', 'P', 13900.00, 15, 'LIQUID-Z5', 'Gray', 10033),
+(100134, 'Sharp Aquos R5', 'P', 38900.00, 10, 'AQUOS-R5', 'Black', 10034),
+(100135, 'Gigabyte GSmart G1355', 'P', 12900.00, 30, 'GSMART-G1355', 'Blue', 10035),
+(100136, 'BenQ B3', 'P', 6990.00, 45, 'BENQ-B3', 'Gray', 10036),
+(100137, 'Vizio Mobile Phone', 'P', 12900.00, 25, 'VIZIO-PHONE', 'Black', 10037),
+(100138, 'Razer Phone', 'P', 19900.00, 15, 'RAZER-PHONE', 'Black', 10038),
+(100139, 'Alcatel 1B (2021)', 'P', 3990.00, 60, 'ALCATEL-1B', 'Black', 10039),
+(100140, 'Toshiba 5G Model', 'P', 16900.00, 12, 'TOSHIBA-5G-MODEL', 'Black', 10040),
+(100141, 'Kyocera Hydro', 'P', 14900.00, 10, 'HYDRO-KYOCERA', 'Black', 10041),
+(100142, 'Vivo Y20', 'P', 7990.00, 20, 'VIVO-Y20', 'Purist Blue', 10042),
+(100143, 'ZTE Blade A5', 'P', 4990.00, 25, 'BLADE-A5', 'Black', 10043),
+(100144, 'Infinix Hot 11', 'P', 9990.00, 30, 'X6815', 'Purple', 10044),
+(100145, 'Tecno Pova 3', 'P', 10900.00, 22, 'TECNO-POVA3', 'Dazzling Black', 10045),
+(100146, 'Poco M4 Pro', 'P', 10990.00, 18, 'M4-PRO', 'Yellow', 10046),
+(100147, 'Motorola Edge 30 Lite', 'P', 13900.00, 20, 'XT2201-1', 'Black', 10047),
+(100148, 'Alcatel 1X', 'P', 4990.00, 50, 'ALCATEL-1X', 'Black', 10048),
+(100149, 'Lava Z6', 'P', 8990.00, 40, 'LZ6', 'Gray', 10049),
+(100150, 'Vivo Y73', 'P', 12900.00, 30, 'V2130', 'Midnight Blue', 10050),
+(100151, 'Samsung Galaxy Z Flip 3', 'P', 35900.00, 15, 'SM-F711B', 'Phantom Black', 10001),
+(100152, 'Apple iPhone 14', 'P', 49900.00, 10, 'A2882', 'Starlight', 10002),
+(100153, 'Huawei P50 Pro', 'P', 42900.00, 12, 'CLT-AN00', 'Gold', 10003),
+(100154, 'Xiaomi Mi 11 Lite', 'P', 13900.00, 20, '2109119DG', 'Truffle Black', 10004),
+(100155, 'Oppo Find X3', 'P', 31900.00, 18, 'CPH2173', 'Gloss Black', 10005),
+(100156, 'Vivo X70 Pro', 'P', 28900.00, 25, 'V2105', 'Gray', 10006),
+(100157, 'OnePlus 9', 'P', 26900.00, 22, 'LE2117', 'Winter Mist', 10007),
+(100158, 'Sony Xperia 5 II', 'P', 25900.00, 15, 'XQ-AS72', 'Black', 10008),
+(100159, 'Nokia G50', 'P', 12900.00, 30, 'TA-1281', 'Ocean Blue', 10009),
+(100160, 'Motorola Edge 20', 'P', 19900.00, 28, 'XT2143-2', 'Frosted Emerald', 10010),
+(100161, 'LG Velvet', 'P', 22900.00, 10, 'LM-G900UM', 'Aurora White', 10011),
+(100162, 'Google Pixel 6', 'P', 25900.00, 20, 'GLU5', 'Stormy Black', 10012),
+(100163, 'Realme GT', 'P', 24900.00, 18, 'RMX2202', 'Dashing Silver', 10013),
+(100164, 'ZTE Axon 20', 'P', 23900.00, 15, 'A2021', 'Black', 10014),
+(100165, 'Alcatel 1S', 'P', 6990.00, 50, '5052D', 'Twilight Blue', 10015),
+(100166, 'BlackBerry Motion', 'P', 22900.00, 12, 'BBE100-1', 'Black', 10016),
+(100167, 'Honor 50', 'P', 18900.00, 20, 'HJC-AN00', 'Emerald Green', 10017),
+(100168, 'Tecno Camon 19', 'P', 10900.00, 24, 'TECNO-CAMON19', 'Dark Blue', 10018),
+(100169, 'Infinix Zero 5G', 'P', 12900.00, 22, 'X6812', 'Cosmic Black', 10019),
+(100170, 'TCL 20 SE', 'P', 10900.00, 25, 'TCL-20SE', 'Twilight Blue', 10020),
+(100171, 'Meizu 18 Pro', 'P', 32900.00, 15, 'M1821', 'White', 10021),
+(100172, 'Lava Agni 2', 'P', 11900.00, 15, 'LAVA-AGNI2', 'Black', 10022),
+(100173, 'Micromax IN Note 2', 'P', 8990.00, 40, 'IN-NOTE-2', 'Black', 10023),
+(100174, 'Gionee M11', 'P', 10900.00, 35, 'M11', 'Blue', 10024),
+(100175, 'Oppo A76', 'P', 7990.00, 50, 'CPH2371', 'Glowing Blue', 10025),
+(100176, 'Honor 10X Lite', 'P', 13900.00, 20, 'HONOR-10X', 'Green', 10026),
+(100177, 'Nubia Z30 Pro', 'P', 28900.00, 12, 'NX682J', 'Black', 10027),
+(100178, 'Xgody X30', 'P', 6990.00, 60, 'XGODY-X30', 'Red', 10028),
+(100179, 'Lava Z4', 'P', 7990.00, 65, 'LZ4', 'Blue', 10029),
+(100180, 'Honor 20', 'P', 15900.00, 18, 'HONOR-20', 'Phantom Blue', 10030),
+(100181, 'Doro 7030', 'P', 10900.00, 50, 'DORO-7030', 'White', 10031),
+(100182, 'Sony Xperia 10 II', 'P', 19900.00, 20, 'XQ-AU52', 'Black', 10032),
+(100183, 'Acer Liquid Z6', 'P', 13900.00, 15, 'LIQUID-Z6', 'Gray', 10033),
+(100184, 'Sharp Aquos R6', 'P', 38900.00, 10, 'AQUOS-R6', 'Black', 10034),
+(100185, 'Gigabyte GSmart G1356', 'P', 12900.00, 30, 'GSMART-G1356', 'Blue', 10035),
+(100186, 'BenQ B5', 'P', 6990.00, 45, 'BENQ-B5', 'Gray', 10036),
+(100187, 'Vizio Smartphone', 'P', 12900.00, 25, 'VIZIO-PHONE-1', 'Black', 10037),
+(100188, 'Razer Phone 2', 'P', 19900.00, 15, 'RAZER-PHONE-2', 'Black', 10038),
+(100189, 'Alcatel 1C', 'P', 3990.00, 60, 'ALCATEL-1C', 'Black', 10039),
+(100190, 'Toshiba Phone', 'P', 16900.00, 12, 'TOSHIBA-PHONE', 'Black', 10040),
+(100191, 'Kyocera DuraForce', 'P', 14900.00, 10, 'DURAFORCE', 'Black', 10041),
+(100192, 'Vivo Y21', 'P', 7990.00, 20, 'VIVO-Y21', 'Midnight Blue', 10042),
+(100193, 'ZTE Blade V30', 'P', 4990.00, 25, 'BLADE-V30', 'Black', 10043),
+(100194, 'Infinix Hot 12', 'P', 9990.00, 30, 'X6816', 'Purple', 10044),
+(100195, 'Tecno Pova 4', 'P', 10900.00, 22, 'TECNO-POVA4', 'Dazzling Black', 10045),
+(100196, 'Poco F3', 'P', 11990.00, 18, 'F3', 'Yellow', 10046),
+(100197, 'Motorola Moto G Power', 'P', 13900.00, 20, 'XT2117-4', 'Dark Gray', 10047),
+(100198, 'Alcatel 1SE', 'P', 4990.00, 50, 'ALCATEL-1SE', 'Black', 10048),
+(100199, 'Lava Z5', 'P', 8990.00, 40, 'LZ5', 'Gray', 10049),
+(100200, 'Vivo V21e', 'P', 12900.00, 30, 'V2106', 'Sunset Melody', 10050),
+(100201, 'Samsung Galaxy A52', 'P', 15900.00, 15, 'SM-A525F', 'Awesome Black', 10001),
+(100202, 'Apple iPhone SE (2022)', 'P', 22900.00, 20, 'A2634', 'Midnight', 10002),
+(100203, 'Huawei Mate 40 Pro', 'P', 46900.00, 12, 'NOH-AN00', 'Silver', 10003),
+(100204, 'Xiaomi Redmi Note 10', 'P', 8990.00, 25, 'M2101K7AI', 'Onyx Gray', 10004),
+(100205, 'Oppo Reno 6', 'P', 21900.00, 18, 'CPH2247', 'Blue', 10005),
+(100206, 'Vivo V21', 'P', 19900.00, 20, 'V2062', 'Sunset Dazzle', 10006),
+(100207, 'OnePlus Nord CE 2', 'P', 17900.00, 22, 'LE2201', 'Gray Mirror', 10007),
+(100208, 'Sony Xperia 1 III', 'P', 31900.00, 10, 'XQ-AT52', 'Frosted Black', 10008),
+(100209, 'Nokia 8.3 5G', 'P', 24900.00, 15, 'TA-1223', 'Polar Night', 10009),
+(100210, 'Motorola Moto G Stylus', 'P', 15900.00, 28, 'XT2115-2', 'Twilight Blue', 10010),
+(100211, 'LG Wing', 'P', 29900.00, 10, 'LM-F100N', 'Aurora Gray', 10011),
+(100212, 'Google Pixel 5a', 'P', 22900.00, 20, 'GA01998', 'Mostly Black', 10012),
+(100213, 'Realme Narzo 30', 'P', 7990.00, 24, 'RMX2156', 'Racing Silver', 10013),
+(100214, 'ZTE Axon 30', 'P', 22900.00, 15, 'A2021', 'Black', 10014),
+(100215, 'Alcatel 3X', 'P', 10900.00, 50, '5052D', 'Blue', 10015),
+(100216, 'BlackBerry Key2', 'P', 19900.00, 12, 'BBE100-2', 'Black', 10016),
+(100217, 'Honor 50 Lite', 'P', 13900.00, 20, 'HJC-AN00', 'Sapphire Blue', 10017),
+(100218, 'Tecno Camon 18', 'P', 9990.00, 24, 'TECNO-CAMON18', 'Black', 10018),
+(100219, 'Infinix Note 11', 'P', 10900.00, 22, 'X6820', 'Green', 10019),
+(100220, 'TCL 30 SE', 'P', 9990.00, 25, 'TCL-30SE', 'Twilight Blue', 10020),
+(100221, 'Meizu 18', 'P', 32900.00, 15, 'M1818', 'White', 10021),
+(100222, 'Lava Agni 1', 'P', 11900.00, 15, 'LAVA-AGNI1', 'Blue', 10022),
+(100223, 'Micromax IN 2B', 'P', 7990.00, 40, 'IN-2B', 'Gray', 10023),
+(100224, 'Gionee M12', 'P', 10900.00, 35, 'M12', 'Black', 10024),
+(100225, 'Oppo A74', 'P', 9990.00, 50, 'CPH2197', 'Fluid Black', 10025),
+(100226, 'Honor 30', 'P', 15900.00, 20, 'HONOR-30', 'Phantom Black', 10026),
+(100227, 'Nubia Z20', 'P', 28900.00, 12, 'NX627J', 'Black', 10027),
+(100228, 'Xgody X60', 'P', 6990.00, 60, 'XGODY-X60', 'Black', 10028),
+(100229, 'Lava Z3', 'P', 7990.00, 65, 'LZ3', 'Blue', 10029),
+(100230, 'Honor 9X', 'P', 15900.00, 18, 'HONOR-9X', 'Black', 10030),
+(100231, 'Doro 8035', 'P', 10900.00, 50, 'DORO-8035', 'White', 10031),
+(100232, 'Sony Xperia 10 III', 'P', 19900.00, 20, 'XQ-AT52', 'Black', 10032),
+(100233, 'Acer Liquid E700', 'P', 13900.00, 15, 'LIQUID-E700', 'Gray', 10033),
+(100234, 'Sharp Aquos R5', 'P', 38900.00, 10, 'AQUOS-R5', 'Black', 10034),
+(100235, 'Gigabyte GSmart G1362', 'P', 12900.00, 30, 'GSMART-G1362', 'Blue', 10035),
+(100236, 'BenQ F1', 'P', 12900.00, 25, 'BENQ-F1', 'Gray', 10036),
+(100237, 'Vizio Phone 2', 'P', 12900.00, 15, 'VIZIO-PHONE-2', 'Black', 10037),
+(100238, 'Razer Phone 3', 'P', 19900.00, 15, 'RAZER-PHONE-3', 'Black', 10038),
+(100239, 'Alcatel 3V', 'P', 6990.00, 60, 'ALCATEL-3V', 'Black', 10039),
+(100240, 'Toshiba Smart Phone', 'P', 16900.00, 12, 'TOSHIBA-PHONE-2', 'Black', 10040),
+(100241, 'Kyocera DuraMax', 'P', 14900.00, 10, 'DURAMAX', 'Black', 10041),
+(100242, 'Vivo Y31', 'P', 7990.00, 20, 'VIVO-Y31', 'Dusk Blue', 10042),
+(100243, 'ZTE Blade A7', 'P', 4990.00, 25, 'BLADE-A7', 'Black', 10043),
+(100244, 'Infinix Hot 11', 'P', 9990.00, 30, 'X6813', 'Green', 10044),
+(100245, 'Tecno Spark 8', 'P', 5990.00, 22, 'TECNO-SPARK8', 'Glorious Blue', 10045),
+(100246, 'Poco M4 Pro', 'P', 12990.00, 18, 'M4-PRO', 'Cool Blue', 10046),
+(100247, 'Motorola Edge 20 Fusion', 'P', 15900.00, 20, 'XT2143-3', 'Electric Violet', 10047),
+(100248, 'Alcatel 1B (2022)', 'P', 4990.00, 50, 'ALCATEL-1B', 'Black', 10048),
+(100249, 'Lava Z6', 'P', 8990.00, 40, 'LZ6', 'Gray', 10049),
+(100250, 'Vivo Y20G', 'P', 10990.00, 30, 'V2030', 'Obsidian Black', 10050);
+
+
+
+
+
+
+INSERT INTO PHONES VALUES
+(100051, 'Android', 64, 4, 4000, '2400x1080', 90),
+(100052, 'iOS', 128, 4, 2018, '1334x750', 60),
+(100053, 'Android', 256, 8, 4400, '2400x1080', 120),
+(100054, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100055, 'Android', 128, 8, 4500, '2400x1080', 90),
+(100056, 'Android', 256, 8, 4000, '2400x1080', 90),
+(100057, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100058, 'Android', 256, 8, 4500, '3840x1644', 120),
+(100059, 'Android', 128, 6, 4000, '2400x1080', 90),
+(100060, 'Android', 64, 4, 5000, '2400x1080', 60),
+(100061, 'Android', 128, 6, 4500, '2460x1080', 90),
+(100062, 'Android', 128, 8, 4680, '2400x1080', 90),
+(100063, 'Android', 128, 4, 5000, '2400x1080', 60),
+(100064, 'Android', 64, 4, 5000, '720x1560', 60),
+(100065, 'Android', 64, 3, 5000, '1560x720', 60),
+(100066, 'Android', 128, 6, 4500, '2400x1080', 90),
+(100067, 'Android', 128, 6, 4200, '2400x1080', 90),
+(100068, 'Android', 64, 4, 5000, '2400x1080', 60),
+(100069, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100070, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100071, 'Android', 256, 8, 4500, '2400x1080', 90),
+(100072, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100073, 'Android', 256, 8, 5000, '2400x1080', 120),
+(100074, 'Android', 64, 4, 5000, '2400x1080', 60),
+(100075, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100076, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100077, 'Android', 256, 8, 4500, '2400x1080', 120),
+(100078, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100079, 'Android', 64, 4, 5000, '2400x1080', 60),
+(100080, 'Android', 128, 6, 4500, '2400x1080', 90),
+(100081, 'Android', 128, 8, 4500, '2400x1080', 90),
+(100082, 'Android', 256, 8, 5000, '2400x1080', 120),
+(100083, 'Android', 64, 4, 5000, '720x1560', 60),
+(100084, 'Android', 64, 4, 5000, '720x1560', 60),
+(100085, 'Android', 128, 6, 4500, '2400x1080', 90),
+(100086, 'Android', 128, 8, 5000, '2400x1080', 90),
+(100087, 'Android', 256, 8, 4500, '2400x1080', 120),
+(100088, 'Android', 128, 6, 4000, '2400x1080', 90),
+(100089, 'Android', 128, 8, 4500, '2400x1080', 90),
+(100090, 'Android', 64, 4, 5000, '2400x1080', 60),
+(100091, 'Android', 128, 8, 4500, '2400x1080', 90),
+(100092, 'Android', 64, 4, 5000, '2400x1080', 60),
+(100093, 'Android', 64, 4, 5000, '2400x1080', 60),
+(100094, 'Android', 64, 4, 5000, '2400x1080', 60),
+(100095, 'Android', 128, 6, 4000, '2400x1080', 90),
+(100096, 'Android', 128, 8, 5000, '2400x1080', 90),
+(100097, 'Android', 256, 8, 4500, '2400x1080', 120),
+(100098, 'Android', 128, 6, 4000, '2400x1080', 90),
+(100099, 'Android', 128, 8, 5000, '2400x1080', 90),
+(100100, 'Android', 256, 8, 4500, '2400x1080', 120),
+(100101, 'Android', 64, 4, 4000, '2400x1080', 60),
+(100102, 'iOS', 128, 4, 2018, '1334x750', 60),
+(100103, 'Android', 256, 8, 4400, '2400x1080', 120),
+(100104, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100105, 'Android', 128, 8, 4500, '2400x1080', 90),
+(100106, 'Android', 256, 8, 4000, '2400x1080', 90),
+(100107, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100108, 'Android', 256, 8, 4500, '3840x1644', 120),
+(100109, 'Android', 128, 6, 4000, '2400x1080', 90),
+(100110, 'Android', 64, 4, 5000, '2400x1080', 60),
+(100111, 'Android', 128, 6, 4500, '2460x1080', 90),
+(100112, 'Android', 128, 8, 4680, '2400x1080', 90),
+(100113, 'Android', 128, 4, 5000, '2400x1080', 60),
+(100114, 'Android', 64, 4, 5000, '720x1560', 60),
+(100115, 'Android', 64, 3, 5000, '1560x720', 60),
+(100116, 'Android', 128, 6, 4500, '2400x1080', 90),
+(100117, 'Android', 128, 6, 4200, '2400x1080', 90),
+(100118, 'Android', 64, 4, 5000, '2400x1080', 60),
+(100119, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100120, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100121, 'Android', 256, 8, 4500, '2400x1080', 90),
+(100122, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100123, 'Android', 256, 8, 5000, '2400x1080', 120),
+(100124, 'Android', 64, 4, 5000, '2400x1080', 60),
+(100125, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100126, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100127, 'Android', 256, 8, 4500, '2400x1080', 120),
+(100128, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100129, 'Android', 64, 4, 5000, '2400x1080', 60),
+(100130, 'Android', 128, 6, 4500, '2400x1080', 90),
+(100131, 'Android', 128, 8, 4500, '2400x1080', 90),
+(100132, 'Android', 256, 8, 5000, '2400x1080', 120),
+(100133, 'Android', 64, 4, 5000, '720x1560', 60),
+(100134, 'Android', 64, 4, 5000, '720x1560', 60),
+(100135, 'Android', 128, 6, 4500, '2400x1080', 90),
+(100136, 'Android', 128, 8, 5000, '2400x1080', 90),
+(100137, 'Android', 256, 8, 4500, '2400x1080', 120),
+(100138, 'Android', 128, 6, 4000, '2400x1080', 90),
+(100139, 'Android', 128, 8, 4500, '2400x1080', 90),
+(100140, 'Android', 256, 8, 4500, '2400x1080', 120),
+(100141, 'Android', 64, 4, 4000, '2400x1080', 60),
+(100142, 'Android', 128, 4, 2018, '1334x750', 60),
+(100143, 'Android', 256, 8, 4400, '2400x1080', 120),
+(100144, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100145, 'Android', 128, 8, 4500, '2400x1080', 90),
+(100146, 'Android', 256, 8, 4000, '2400x1080', 90),
+(100147, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100148, 'Android', 256, 8, 4500, '3840x1644', 120),
+(100149, 'Android', 128, 6, 4000, '2400x1080', 90),
+(100150, 'Android', 64, 4, 5000, '2400x1080', 60),
+(100151, 'Android', 128, 6, 4500, '2460x1080', 90),
+(100152, 'iOS', 128, 8, 4680, '2400x1080', 90),
+(100153, 'Android', 128, 4, 5000, '2400x1080', 60),
+(100154, 'Android', 64, 4, 5000, '720x1560', 60),
+(100155, 'Android', 64, 3, 5000, '1560x720', 60),
+(100156, 'Android', 128, 6, 4500, '2400x1080', 90),
+(100157, 'Android', 128, 6, 4200, '2400x1080', 90),
+(100158, 'Android', 64, 4, 5000, '2400x1080', 60),
+(100159, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100160, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100161, 'Android', 256, 8, 4500, '2400x1080', 90),
+(100162, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100163, 'Android', 256, 8, 5000, '2400x1080', 120),
+(100164, 'Android', 64, 4, 5000, '2400x1080', 60),
+(100165, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100166, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100167, 'Android', 256, 8, 4500, '2400x1080', 120),
+(100168, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100169, 'Android', 64, 4, 5000, '2400x1080', 60),
+(100170, 'Android', 128, 6, 4500, '2400x1080', 90),
+(100171, 'Android', 128, 8, 4500, '2400x1080', 90),
+(100172, 'Android', 256, 8, 5000, '2400x1080', 120),
+(100173, 'Android', 64, 4, 5000, '720x1560', 60),
+(100174, 'Android', 64, 4, 5000, '720x1560', 60),
+(100175, 'Android', 128, 6, 4500, '2400x1080', 90),
+(100176, 'Android', 128, 8, 5000, '2400x1080', 90),
+(100177, 'Android', 256, 8, 4500, '2400x1080', 120),
+(100178, 'Android', 128, 6, 4000, '2400x1080', 90),
+(100179, 'Android', 128, 8, 4500, '2400x1080', 90),
+(100180, 'Android', 256, 8, 4500, '2400x1080', 120),
+(100181, 'Android', 64, 4, 4000, '2400x1080', 60),
+(100182, 'Android', 128, 4, 2018, '1334x750', 60),
+(100183, 'Android', 256, 8, 4400, '2400x1080', 120),
+(100184, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100185, 'Android', 128, 8, 4500, '2400x1080', 90),
+(100186, 'Android', 256, 8, 4000, '2400x1080', 90),
+(100187, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100188, 'Android', 256, 8, 4500, '3840x1644', 120),
+(100189, 'Android', 128, 6, 4000, '2400x1080', 90),
+(100190, 'Android', 64, 4, 5000, '2400x1080', 60),
+(100191, 'Android', 128, 6, 4500, '2460x1080', 90),
+(100192, 'Android', 128, 8, 4680, '2400x1080', 90),
+(100193, 'Android', 128, 4, 5000, '2400x1080', 60),
+(100194, 'Android', 64, 4, 5000, '720x1560', 60),
+(100195, 'Android', 64, 3, 5000, '1560x720', 60),
+(100196, 'Android', 128, 6, 4500, '2400x1080', 90),
+(100197, 'Android', 128, 6, 4200, '2400x1080', 90),
+(100198, 'Android', 64, 4, 5000, '2400x1080', 60),
+(100199, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100200, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100201, 'Android', 256, 8, 4500, '2400x1080', 90),
+(100202, 'iOS', 128, 6, 5000, '2400x1080', 90),
+(100203, 'Android', 256, 8, 5000, '2400x1080', 120),
+(100204, 'Android', 64, 4, 5000, '2400x1080', 60),
+(100205, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100206, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100207, 'Android', 256, 8, 4500, '2400x1080', 120),
+(100208, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100209, 'Android', 64, 4, 5000, '2400x1080', 60),
+(100210, 'Android', 128, 6, 4500, '2400x1080', 90),
+(100211, 'Android', 128, 8, 4500, '2400x1080', 90),
+(100212, 'Android', 256, 8, 5000, '2400x1080', 120),
+(100213, 'Android', 64, 4, 5000, '720x1560', 60),
+(100214, 'Android', 64, 4, 5000, '720x1560', 60),
+(100215, 'Android', 128, 6, 4500, '2400x1080', 90),
+(100216, 'Android', 128, 8, 5000, '2400x1080', 90),
+(100217, 'Android', 256, 8, 4500, '2400x1080', 120),
+(100218, 'Android', 128, 6, 4000, '2400x1080', 90),
+(100219, 'Android', 128, 8, 4500, '2400x1080', 90),
+(100220, 'Android', 256, 8, 4500, '2400x1080', 120),
+(100221, 'Android', 64, 4, 4000, '2400x1080', 60),
+(100222, 'Android', 128, 4, 2018, '1334x750', 60),
+(100223, 'Android', 256, 8, 4400, '2400x1080', 120),
+(100224, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100225, 'Android', 128, 8, 4500, '2400x1080', 90),
+(100226, 'Android', 256, 8, 4000, '2400x1080', 90),
+(100227, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100228, 'Android', 256, 8, 4500, '3840x1644', 120),
+(100229, 'Android', 128, 6, 4000, '2400x1080', 90),
+(100230, 'Android', 64, 4, 5000, '2400x1080', 60),
+(100231, 'Android', 128, 6, 4500, '2460x1080', 90),
+(100232, 'Android', 128, 8, 4680, '2400x1080', 90),
+(100233, 'Android', 128, 4, 5000, '2400x1080', 60),
+(100234, 'Android', 64, 4, 5000, '720x1560', 60),
+(100235, 'Android', 64, 3, 5000, '1560x720', 60),
+(100236, 'Android', 128, 6, 4500, '2400x1080', 90),
+(100237, 'Android', 128, 6, 4200, '2400x1080', 90),
+(100238, 'Android', 64, 4, 5000, '2400x1080', 60),
+(100239, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100240, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100241, 'Android', 256, 8, 4500, '2400x1080', 90),
+(100242, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100243, 'Android', 256, 8, 5000, '2400x1080', 120),
+(100244, 'Android', 64, 4, 5000, '2400x1080', 60),
+(100245, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100246, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100247, 'Android', 256, 8, 4500, '2400x1080', 120),
+(100248, 'Android', 128, 6, 5000, '2400x1080', 90),
+(100249, 'Android', 64, 4, 5000, '2400x1080', 60),
+(100250, 'Android', 128, 6, 4500, '2400x1080', 90); 

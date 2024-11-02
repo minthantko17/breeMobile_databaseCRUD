@@ -1,0 +1,58 @@
+-- checking shipment
+SELECT s.trackingNumber, c.customerId, CONCAT(c.firstName, ' ', c.lastName) AS customerName,
+    s.shipmentId, s.shipmentStatus, s.shipmentDate, s.shipmentMethod, s.shipmentCost      
+    FROM shipments s 
+    JOIN customers c ON s.customerId = c.customerId 
+    WHERE s.trackingNumber = "AGMZQ6601707119";
+
+======================================================
+
+-- viewing Phones
+select * from products pr join phones as p using (productId);
+
+-- viewing accessories cover
+select * from products pr join accessories a using (productId) join covers cv ;
+
+-- view accessories charger
+select * from products pr join accessories a using (productId) join chargers ch ;
+
+--view accessories headsets
+select * from products pr join accessories a using (productId) join headsets h ;
+
+-- combined views for all products and their specifications
+select * from products left join phones using (productId) 
+    left join (accessories left join covers using(productId) 
+                left join chargers using(productId) left join headsets using (productId)) 
+    using (productId);
+
+=======================================================
+
+-- view orderdetails and product
+select o.orderId, b.branchName, c.customerId, concat(c.firstName," ", c.lastName) as customerName, c.mobileNumber, 
+	pr.productName, pr.price as UnitPrice, od.quantity, od.totalPrice from orders o 
+	join customers c using (customerId) 
+	join (orderDetails od join products pr using (productId)) using (orderId)
+    join (orderbranches ob join branches b using(branchId)) using (orderId) ;
+
+-- adding order and order orderdetails
+insert into orders (orderId, totalAmount, orderDate, customerId, shipmentId) 
+    values(670000001, 23900, '2024-06-06 09:00:00', 100000001, 770001)
+insert into orderDetails(orderId, productId, quantity, totalPrice) 
+    value(670000001, 100001, 1, 23900);
+
+-- update total price according to unit price
+UPDATE ORDERDETAILS od
+JOIN PRODUCTS p ON od.productId = p.productId
+SET od.totalPrice = od.quantity * p.price;
+
+-- update total amount in orders according to order detail
+UPDATE ORDERS o JOIN (
+        SELECT orderId, SUM(totalPrice) AS totalSum
+        FROM ORDERDETAILS
+        GROUP BY orderId
+        ) od ON o.orderId = od.orderId
+    SET o.totalAmount = od.totalSum
+
+======================================================
+
+
