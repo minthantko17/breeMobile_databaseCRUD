@@ -1,4 +1,4 @@
-## Bree Mobile Shop Database Management System
+# Bree Mobile Shop Database Management System
 
 
 You can create, read, update, delete data from index.php.
@@ -7,7 +7,7 @@ You can create, read, update, delete data from index.php.
 (used Xampp, php, mysql)
 
 ------------------------------------------------
-# Instruction
+### Instruction
 Paste the file in ..\xampp\htdocs\
 Open Xampp app on your PC.
 Run Apache and MySQL in Xampp. (If there is the problem connecting, change apache port to 8080 and MySQL port to 3307 via config file.)
